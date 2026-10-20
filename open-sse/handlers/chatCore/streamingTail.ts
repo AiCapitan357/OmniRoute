@@ -102,6 +102,7 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
     isCombo,
     isDroidCLI,
     isResponsesEndpoint,
+    lateBoundStreamHandlers,
     log,
     managedLease,
     memoryOwnerId,
@@ -641,6 +642,13 @@ export async function runStreamingTail(deps: StreamingTailDeps) {
         type: "client_disconnected",
       }),
   });
+  // Publish both handlers to chatCore's stream controller NOW — before the pipeline below starts
+  // pumping. Returning them only through `carry` (after this function resolved) let an upstream
+  // failure pumped during the remaining awaits find a `null` handler and go unfinalized (#17290).
+  if (lateBoundStreamHandlers) {
+    lateBoundStreamHandlers.onPipelineStreamError = onPipelineStreamError;
+    lateBoundStreamHandlers.onClientDisconnectFinalize = onClientDisconnectFinalize;
+  }
 
   // For providers using Responses API format, translate stream back to openai (Chat Completions) format
   // UNLESS client is Droid CLI which expects openai-responses format back

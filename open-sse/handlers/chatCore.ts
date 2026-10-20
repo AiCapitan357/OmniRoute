@@ -2405,16 +2405,21 @@ async function handleChatCoreInner({
       apiKeyCodexServiceMode
     );
 
-  let onPipelineStreamError: streamFailure.PipelineStreamErrorHandler | null = null;
-  let onClientDisconnectFinalize:
-    ((event: { reason: string; duration: number }) => boolean) | null = null;
+  // Late-bound stream handlers, shared by reference with the streaming tail. The tail publishes
+  // them the moment it creates them (before the pipeline starts pumping) — handing them back
+  // through `carry` only after the tail returned left a window (#14725 → #17290) in which an
+  // upstream failure pumped during the tail's remaining awaits found no handler and was dropped.
+  const lateBoundStreamHandlers: {
+    onPipelineStreamError: streamFailure.PipelineStreamErrorHandler | null;
+    onClientDisconnectFinalize: ((event: { reason: string; duration: number }) => boolean) | null;
+  } = { onPipelineStreamError: null, onClientDisconnectFinalize: null };
 
   // Create stream controller for disconnect detection — wiring extracted to
   // chatCore/chatStreamController.ts (chatCore slice 2); the two late-bound handlers above are
   // read through getters at event time.
   const streamController = createChatStreamController({
-    getClientDisconnectFinalize: () => onClientDisconnectFinalize,
-    getPipelineStreamError: () => onPipelineStreamError,
+    getClientDisconnectFinalize: () => lateBoundStreamHandlers.onClientDisconnectFinalize,
+    getPipelineStreamError: () => lateBoundStreamHandlers.onPipelineStreamError,
     pendingScope,
     finalizePendingScope,
     onDisconnect,
@@ -3321,9 +3326,13 @@ async function handleChatCoreInner({
     traceId,
     translatedBody,
     videoBridgeObserved,
+    lateBoundStreamHandlers,
   });
-  onPipelineStreamError = streamingTailOutcome.carry.onPipelineStreamError;
-  onClientDisconnectFinalize = streamingTailOutcome.carry.onClientDisconnectFinalize;
+  // Normally a no-op (the tail already published both); kept so an early-return path that never
+  // reached the finalizers still leaves the holder consistent with what the tail carried back.
+  lateBoundStreamHandlers.onPipelineStreamError = streamingTailOutcome.carry.onPipelineStreamError;
+  lateBoundStreamHandlers.onClientDisconnectFinalize =
+    streamingTailOutcome.carry.onClientDisconnectFinalize;
   turnExecutionHandedOffToStream = streamingTailOutcome.carry.turnExecutionHandedOffToStream;
   return streamingTailOutcome.result;
   } finally {
