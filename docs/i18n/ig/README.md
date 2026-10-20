@@ -25,9 +25,9 @@
 
 > **Jiri akaụntụ ndị na-enye ọrụ nke gị.** Nke a bụ ngụkọta e mere atụmatụ ya site n'ọkwa efughị ụgwọ dị iche iche nke ndị na-enye ọrụ ndị ọzọ ị tozuru maka ha, ọ bụghị token OmniRoute nyere. Debanye aha, nweta ozi njirimara ebe achọrọ ya, ma jikọọ ndị na-enye ọrụ ị nwere ike iji; onye na-enye ọrụ ọ bụla na-achịkwa oke, nnweta, na usoro nke ya.
 >
-> Iji aka chịkọta ọkwa efughị ụgwọ ọnụ na-esiri ike — ọtụtụ SDK, ọtụtụ oke ọnụego, ma ị maghị ego ole i nwere n'ezie. OmniRoute depụtara **ndekọ ọkwa efughị ụgwọ 478 n'ofe igodo ọdọ mmiri na-emegharị ugboro 34** ma na-agbakọ ọnụọgụ token isi site na **ọdọ mmiri 17 nwere mmefu ego kwa ọnwa dị mma nke e bipụtara, tinyere oke Groq ise maka model ọ bụla**, ebe ewepụla ihe ndị megharịrị n'ihi ọdọ mmiri a na-ekekọrịta. E gosipụtara iche oke ndị na-emeghe naanị mgbe nyochachara njirimara mpaghara (ugbu a: ModelScope), +~6M n'azụ nkwenye njirimara mpaghara, a naghịkwa etinye ha na ngụkọta ọnụọgụ isi. Nsonaazụ ahụ na-anọgide na dashboard (`/dashboard/free-tiers`).
+> Iji aka chịkọta ọkwa efughị ụgwọ ọnụ na-esiri ike — ọtụtụ SDK, ọtụtụ oke ọnụego, ma ị maghị ego ole i nwere n'ezie. OmniRoute depụtara **ndekọ ọkwa efughị ụgwọ 467 n'ofe igodo ọdọ mmiri na-emegharị ugboro 34** ma na-agbakọ ọnụọgụ token isi site na **ọdọ mmiri 17 nwere mmefu ego kwa ọnwa dị mma nke e bipụtara, tinyere oke Groq ise maka model ọ bụla**, ebe ewepụla ihe ndị megharịrị n'ihi ọdọ mmiri a na-ekekọrịta. E gosipụtara iche oke ndị na-emeghe naanị mgbe nyochachara njirimara mpaghara (ugbu a: ModelScope), +~6M n'azụ nkwenye njirimara mpaghara, a naghịkwa etinye ha na ngụkọta ọnụọgụ isi. Nsonaazụ ahụ na-anọgide na dashboard (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kaadị mmefu ego ọkwa efughị ụgwọ OmniRoute: ihe ruru token efughị ụgwọ 1.62B kwa ọnwa mgbe niile, ruo ihe ruru 2.22B n'ọnwa mbụ site na kredit ndebanye aha, nke sitere na igodo ọdọ mmiri na-emegharị ugboro 34 e dekọrọ, na-ekpuchi ndenye ọkwa efughị ụgwọ 478 e depụtara n'azụ otu endpoint. Mgbakọ ziri ezi nke wepụchara ọdọ mmiri ndị megharịrị — a gụrụ ọdọ mmiri ọ bụla a na-ekekọrịta naanị otu ugboro, gụnyere ọdọ mmiri na-emegharị ugboro 17 nwere mmefu ego token kwa ọnwa dị mma nke e bipụtara, tinyere oke Groq ise maka model ọ bụla; akara ndị na-enye ọrụ 12 dịka ndị a ga-ezere na katalọgụ ihe ize ndụ nke usoro ka ị nwee ike ikpebi. Ogwe mmefu ego gụnyere Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (oke ise maka model ọ bụla) na ọdọ mmiri ndị pere mpe, tinyere kredit ndebanye aha nke ọnwa mbụ na ndị na-enye ọrụ efughị ụgwọ kpamkpam na-enweghị oke token, nke e gosipụtara iche ka ha ghara ime ka ọnụọgụ isi dị elu n'ụzọ na-ezighị ezi. Ojiji/nke fọdụrụ ozugbo na /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kaadị mmefu ego ọkwa efughị ụgwọ OmniRoute: ihe ruru token efughị ụgwọ 1.62B kwa ọnwa mgbe niile, ruo ihe ruru 2.22B n'ọnwa mbụ site na kredit ndebanye aha, nke sitere na igodo ọdọ mmiri na-emegharị ugboro 34 e dekọrọ, na-ekpuchi ndenye ọkwa efughị ụgwọ 467 e depụtara n'azụ otu endpoint. Mgbakọ ziri ezi nke wepụchara ọdọ mmiri ndị megharịrị — a gụrụ ọdọ mmiri ọ bụla a na-ekekọrịta naanị otu ugboro, gụnyere ọdọ mmiri na-emegharị ugboro 17 nwere mmefu ego token kwa ọnwa dị mma nke e bipụtara, tinyere oke Groq ise maka model ọ bụla; akara ndị na-enye ọrụ 12 dịka ndị a ga-ezere na katalọgụ ihe ize ndụ nke usoro ka ị nwee ike ikpebi. Ogwe mmefu ego gụnyere Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (oke ise maka model ọ bụla) na ọdọ mmiri ndị pere mpe, tinyere kredit ndebanye aha nke ọnwa mbụ na ndị na-enye ọrụ efughị ụgwọ kpamkpam na-enweghị oke token, nke e gosipụtara iche ka ha ghara ime ka ọnụọgụ isi dị elu n'ụzọ na-ezighị ezi. Ojiji/nke fọdụrụ ozugbo na /dashboard/free-tiers."/>
 
 > Nchịkọta na-emegharị emegharị nke ibe `/dashboard/free-tiers` dị ugbu a. Usoro zuru ezu (iwepụ ọdọ mmiri ndị megharịrị, ọkwa kredit, usoro ndị na-enye ọrụ): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                  |         v3.8.50          | **v3.8.51** |      `v3.8.52+`       |
+|                                  |         v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | -------------------------------- | :----------------------: | :---------: | :-------------------: |
 | 🌐 Ndị na-enye ọrụ               |           352            |   **358**   |          375          |
 | 🧠 ID ụdị nkata pụrụ iche        |           1320           |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ A na-ahọrọ iji Radar n'onwe gị, ọ na-ejikwa naanị GET. Klayentị Omni
 
 </div>
 
-> Isi ihe ọhụrụ sitere na **v3.8.20 → v3.8.52**. Akụkọ zuru ezu dị na [`CHANGELOG.md`](CHANGELOG.md).
+> Isi ihe ọhụrụ sitere na **v3.8.20 → v3.8.53**. Akụkọ zuru ezu dị na [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Nduzi `quota-weighted`** — atụmatụ combo nke 20 na-amafe akaụntụ ndị quota ha gwụrụ, wee họrọ n'etiti ndị fọdụrụ dịka oke quota fọdụrụ ÷ ibu arịrịọ ndị a ka na-ahazi, ma na-edobe mkparịta ụka ndị dị ugbu a n'otu ebe. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🧰 Ọnọdụ na-enweghị interface** — `omniroute serve --headless` (ma ọ bụ `OMNIROUTE_HEADLESS=1`) na-eme naanị injin proxy `/v1/*`, ebe dashboard na subsystem ndị bụ naanị maka dashboard na-anọghị n'ọrụ. → [Ọnọdụ Headless](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ na-egosi env/args kpọmkwem tupu emezuo ha, ebe `--api-key-env NAME` na-eme ka 
 
 </div>
 
-> **Ndị na-enye ọrụ 375 e debanyere aha** n'ofe nchịkọta nkata, mgbasa ozi, ọchụchọ, nke mpaghara, ndị nnọchi anya igwe ojii na sistemụ ndị bụ isi, gụnyere **153 nwere metadata nchọpụta `hasFree: true`**. Ndebanye ụdịdị nkata ahụ gụnyere **ndị na-enye ọrụ 239 / njikọ pụrụ iche 3,059 nke onye na-enye ọrụ na ụdịdị / NJ ụdịdị izizi 1,475**; katalọgụ mmefu efughị ego dị iche nwere **ahịrị 478 maka ụdịdị ọ bụla**, **otu ego mmefu na-emegharị ugboro 34** na **ndị na-enye ọrụ efughị ego ruo mgbe ebighị ebi 52, nke na-emegharị ugboro/na-achọghị igodo**. Ndị a bụ ọnụ ọgụgụ ntọala dị iche iche dịka e siri hazie ha; nkọwa na mgbakọ e wepụrụ mmegharị otu ego dị na [Ntụaka Ndị Na-enye Ọrụ](docs/reference/PROVIDER_REFERENCE.md) na [Ọkwa Efughị Ego](docs/reference/FREE_TIERS.md).
+> **Ndị na-enye ọrụ 375 e debanyere aha** n'ofe nchịkọta nkata, mgbasa ozi, ọchụchọ, nke mpaghara, ndị nnọchi anya igwe ojii na sistemụ ndị bụ isi, gụnyere **153 nwere metadata nchọpụta `hasFree: true`**. Ndebanye ụdịdị nkata ahụ gụnyere **ndị na-enye ọrụ 239 / njikọ pụrụ iche 3,059 nke onye na-enye ọrụ na ụdịdị / NJ ụdịdị izizi 1,475**; katalọgụ mmefu efughị ego dị iche nwere **ahịrị 467 maka ụdịdị ọ bụla**, **otu ego mmefu na-emegharị ugboro 34** na **ndị na-enye ọrụ efughị ego ruo mgbe ebighị ebi 52, nke na-emegharị ugboro/na-achọghị igodo**. Ndị a bụ ọnụ ọgụgụ ntọala dị iche iche dịka e siri hazie ha; nkọwa na mgbakọ e wepụrụ mmegharị otu ego dị na [Ntụaka Ndị Na-enye Ọrụ](docs/reference/PROVIDER_REFERENCE.md) na [Ọkwa Efughị Ego](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1368,7 +1368,7 @@ Metrik iwu na 2026-10-18: **vidiyo pụrụ iche 1.976** · **nlele amaara 20.22
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Ntuziaka Nkwụsi Ike</a></b></td><td>Ndị nkwụsị sekit, oge izu ike, kwụ, mgbochi ìgwè na-awụli n'otu oge, na nṅomi TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Injin Auto-Combo</a></b></td><td>Ntụle ihe 16, ngwugwu ọnọdụ, na mmezi onwe</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Ntuziaka Proxy</a></b></td><td>Sistemụ proxy ọkwa 3, ahịa 1proxy, na CRUD ndekọ</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Ọkwa Efughị Ego</a></b></td><td>Ndepụta ejikọtara ọnụ: ọdọ ọrụ na-emegharị ugboro 34 e dere nkọwa ha / ndenye ọkwa efughị ego 478 e depụtara</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Ọkwa Efughị Ego</a></b></td><td>Ndepụta ejikọtara ọnụ: ọdọ ọrụ na-emegharị ugboro 34 e dere nkọwa ha / ndenye ọkwa efughị ego 467 e depụtara</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Ụlọ Ngosi Njirimara</a></b></td><td>Njegharị dashboard anya nwere nseta ihuenyo</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Akwụkwọ Nkọwa Codebase</a></b></td><td>Njegharị codebase dị mfe maka ndị mbido</td></tr>
 </table>
@@ -1811,7 +1811,7 @@ Ikikere MIT - lee [LICENSE](LICENSE) maka nkọwa ndị ọzọ.
 
 **[⬆ Laghachi n'elu](#-omniroute)** · E ji ❤️ wuo ya maka obodo AI nke sọftụwia oghe.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Ikikere MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Ikikere MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- Agbanyere Mkparịta ụka GitHub maka ajụjụ na azịza nke obodo -->

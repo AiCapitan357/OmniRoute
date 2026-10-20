@@ -25,9 +25,9 @@
 
 > **使用您自己的提供者账户。** 这是对您可分别申请的第三方免费套餐的汇总估算，并非 OmniRoute 提供的 Token 额度。请注册账户，在需要时获取凭据，并连接您可以使用的提供者；每个提供者均自行控制其限额、可用性和条款。
 >
-> 手动叠加免费套餐非常麻烦——数十个 SDK、数十种速率限制，而且您根本不知道自己实际拥有多少额度。OmniRoute 收录了**分布于 34 个周期性共享池键中的 478 个免费套餐条目**，并根据**已公布正数月度预算的 17 个共享池以及五个 Groq 单模型上限**计算 Token 总量，同时按共享池去重。仅在通过地区身份验证后才开放的配额（目前为 ModelScope）会单独显示，即地区身份验证后可获得额外约 6M，并且绝不会计入标题中的总量。结果会持续显示在仪表板中（`/dashboard/free-tiers`）。
+> 手动叠加免费套餐非常麻烦——数十个 SDK、数十种速率限制，而且您根本不知道自己实际拥有多少额度。OmniRoute 收录了**分布于 34 个周期性共享池键中的 467 个免费套餐条目**，并根据**已公布正数月度预算的 17 个共享池以及五个 Groq 单模型上限**计算 Token 总量，同时按共享池去重。仅在通过地区身份验证后才开放的配额（目前为 ModelScope）会单独显示，即地区身份验证后可获得额外约 6M，并且绝不会计入标题中的总量。结果会持续显示在仪表板中（`/dashboard/free-tiers`）。
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute 免费套餐预算卡片：每月稳定提供约 1.62B 免费 Token，首月加上注册赠送额度后最高可达约 2.22B；34 个已记录的周期性共享池键涵盖 478 个已收录的免费套餐条目，并统一通过一个端点访问。真实的共享池去重计算——每个共享池仅计算一次，包括 17 个已公布正数月度 Token 预算的周期性共享池，以及五个 Groq 单模型上限；条款风险目录中有 12 个提供者被标记为应避免使用，由您自行决定。预算条包含 Mistral 1B、Nara 210M、LLM7 150M、xKiro 150M、Groq 30M（五个单模型上限）以及其他较小的共享池；首月注册赠送额度和永久免费的无 Token 上限提供者会单独展示，因此绝不会虚增标题中的总量。可在 /dashboard/free-tiers 查看实时已用和剩余额度。"/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute 免费套餐预算卡片：每月稳定提供约 1.62B 免费 Token，首月加上注册赠送额度后最高可达约 2.22B；34 个已记录的周期性共享池键涵盖 467 个已收录的免费套餐条目，并统一通过一个端点访问。真实的共享池去重计算——每个共享池仅计算一次，包括 17 个已公布正数月度 Token 预算的周期性共享池，以及五个 Groq 单模型上限；条款风险目录中有 12 个提供者被标记为应避免使用，由您自行决定。预算条包含 Mistral 1B、Nara 210M、LLM7 150M、xKiro 150M、Groq 30M（五个单模型上限）以及其他较小的共享池；首月注册赠送额度和永久免费的无 Token 上限提供者会单独展示，因此绝不会虚增标题中的总量。可在 /dashboard/free-tiers 查看实时已用和剩余额度。"/>
 
 > 实时 `/dashboard/free-tiers` 页面的动画摘要。完整方法说明（共享池去重、额度层级、提供者条款）：**[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**。
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                     |        v3.8.50        | **v3.8.51** |      `v3.8.52+`       |
+|                     |        v3.8.50        | **v3.8.51** |      `v3.8.53+`       |
 | ------------------- | :-------------------: | :---------: | :-------------------: |
 | 🌐 提供者           |          352          |   **358**   |          375          |
 | 🧠 唯一聊天模型 ID  |         1320          |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ Radar 需主动选择启用，且仅使用 GET 请求。OmniRoute 客户端不�
 
 </div>
 
-> **v3.8.20 → v3.8.52** 的近期亮点。完整历史记录请参阅 [`CHANGELOG.md`](CHANGELOG.md)。
+> **v3.8.20 → v3.8.53** 的近期亮点。完整历史记录请参阅 [`CHANGELOG.md`](CHANGELOG.md)。
 
 - **⚖️ `quota-weighted` 路由** — 第 20 种组合策略会跳过配额已耗尽的账户，然后按照剩余配额 ÷ 进行中负载的比例从其余账户中抽取，同时保持现有对话固定到原账户。→ [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🧰 无头模式** — `omniroute serve --headless`（或 `OMNIROUTE_HEADLESS=1`）仅运行 `/v1/*` 代理引擎，并关闭仪表板及仅供仪表板使用的子系统。→ [无头模式](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ omniroute configure codex          # 还支持：claude opencode qwen aider goos
 
 </div>
 
-> 在规范的聊天、媒体、搜索、本地、云代理和系统集合中，共有 **375 个已注册提供者**，其中 **153 个带有 `hasFree: true` 发现元数据**。聊天模型注册表涵盖 **239 个提供者 / 3,059 个不同的提供者-模型组合 / 1,475 个原始模型 ID**；独立的免费额度目录包含 **478 条按模型统计的记录**、**34 个周期性额度池**和 **52 个提供周期性/无密钥永久免费服务的提供者**。这些统计口径按设计有所不同；相关定义和按额度池去重后的计算方式，请参阅[提供者参考](docs/reference/PROVIDER_REFERENCE.md)和[免费层级](docs/reference/FREE_TIERS.md)。
+> 在规范的聊天、媒体、搜索、本地、云代理和系统集合中，共有 **375 个已注册提供者**，其中 **153 个带有 `hasFree: true` 发现元数据**。聊天模型注册表涵盖 **239 个提供者 / 3,059 个不同的提供者-模型组合 / 1,475 个原始模型 ID**；独立的免费额度目录包含 **467 条按模型统计的记录**、**34 个周期性额度池**和 **52 个提供周期性/无密钥永久免费服务的提供者**。这些统计口径按设计有所不同；相关定义和按额度池去重后的计算方式，请参阅[提供者参考](docs/reference/PROVIDER_REFERENCE.md)和[免费层级](docs/reference/FREE_TIERS.md)。
 
 <div align="center">
 
@@ -1367,7 +1367,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也会跳过
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">韧性指南</a></b></td><td>断路器、冷却时间、队列、防惊群、TLS 欺骗</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">自动组合引擎</a></b></td><td>16 因素评分、模式包、自愈</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">代理指南</a></b></td><td>3 级代理系统、1proxy 市场、注册表 CRUD</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">免费套餐</a></b></td><td>汇总目录：34 个已记录的周期性资源池 / 478 个已收录的免费套餐条目</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">免费套餐</a></b></td><td>汇总目录：34 个已记录的周期性资源池 / 467 个已收录的免费套餐条目</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">功能展示</a></b></td><td>带截图的可视化仪表板导览</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">代码库文档</a></b></td><td>适合初学者的代码库导览</td></tr>
 </table>
@@ -1810,7 +1810,7 @@ MIT 许可证——详情请参阅 [LICENSE](LICENSE)。
 
 **[⬆ 返回顶部](#-omniroute)** · 用 ❤️ 为开源 AI 社区打造。
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT 许可证 · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT 许可证 · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- 已启用 GitHub Discussions，供社区问答 -->

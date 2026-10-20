@@ -25,9 +25,9 @@
 
 > **使用您自己的提供者帳戶。** 這是針對各自符合資格的第三方免費方案所估算的總量，並非 OmniRoute 提供的 Token 額度。請註冊帳戶、在需要時取得憑證，並連接您可使用的提供者；各提供者均自行管理其限制、可用性與條款。
 >
-> 手動疊加免費方案非常麻煩——數十個 SDK、數十種速率限制，而且完全不知道自己實際擁有多少額度。OmniRoute 收錄了**分布於 34 個週期性共用額度集區鍵的 478 個免費方案項目**，並根據**具有已公布正數每月預算的 17 個集區，加上五個 Groq 單模型上限**計算 Token 標題數字，同時依共用集區去除重複計算。只有通過區域身分檢查後才會開放的配額（目前為 ModelScope）會另外顯示，即通過區域身分驗證後可取得約 +6M，且絕不計入標題總數。結果會持續顯示於儀表板（`/dashboard/free-tiers`）。
+> 手動疊加免費方案非常麻煩——數十個 SDK、數十種速率限制，而且完全不知道自己實際擁有多少額度。OmniRoute 收錄了**分布於 34 個週期性共用額度集區鍵的 467 個免費方案項目**，並根據**具有已公布正數每月預算的 17 個集區，加上五個 Groq 單模型上限**計算 Token 標題數字，同時依共用集區去除重複計算。只有通過區域身分檢查後才會開放的配額（目前為 ModelScope）會另外顯示，即通過區域身分驗證後可取得約 +6M，且絕不計入標題總數。結果會持續顯示於儀表板（`/dashboard/free-tiers`）。
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute 免費方案預算卡：每月穩定提供約 1.62B 個免費 Token，若計入註冊贈送額度，首月最高可達約 2.22B；透過單一端點存取 34 個有文件記錄的週期性集區鍵，涵蓋 478 個已收錄的免費方案項目。採用誠實且依集區去除重複計算的方式——每個共用集區僅計算一次，其中包括 17 個具有已公布正數每月 Token 預算的週期性集區，以及五個 Groq 單模型上限；條款風險目錄中有 12 家提供者被標示為應避免使用，讓您自行決定。預算長條包括 Mistral 1B、Nara 210M、LLM7 150M、xKiro 150M、Groq 30M（五個單模型上限）以及較小的集區；首月註冊贈送額度與永久免費且無 Token 上限的提供者會另外顯示，因此絕不會膨脹標題數字。即時已用量／剩餘量請見 /dashboard/free-tiers。"/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute 免費方案預算卡：每月穩定提供約 1.62B 個免費 Token，若計入註冊贈送額度，首月最高可達約 2.22B；透過單一端點存取 34 個有文件記錄的週期性集區鍵，涵蓋 467 個已收錄的免費方案項目。採用誠實且依集區去除重複計算的方式——每個共用集區僅計算一次，其中包括 17 個具有已公布正數每月 Token 預算的週期性集區，以及五個 Groq 單模型上限；條款風險目錄中有 12 家提供者被標示為應避免使用，讓您自行決定。預算長條包括 Mistral 1B、Nara 210M、LLM7 150M、xKiro 150M、Groq 30M（五個單模型上限）以及較小的集區；首月註冊贈送額度與永久免費且無 Token 上限的提供者會另外顯示，因此絕不會膨脹標題數字。即時已用量／剩餘量請見 /dashboard/free-tiers。"/>
 
 > 即時 `/dashboard/free-tiers` 頁面的動畫摘要。完整方法（集區去重、額度層級、提供者條款）：**[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**。
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                        |        v3.8.50        | **v3.8.51** |      `v3.8.52+`       |
+|                        |        v3.8.50        | **v3.8.51** |      `v3.8.53+`       |
 | ---------------------- | :-------------------: | :---------: | :-------------------: |
 | 🌐 提供者              |          352          |   **358**   |          375          |
 | 🧠 不重複的聊天模型 ID |         1320          |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ Radar 採選擇加入制，且僅使用 GET。OmniRoute 用戶端不會上傳提
 
 </div>
 
-> **v3.8.20 → v3.8.52** 的近期亮點。完整歷史記錄請參閱 [`CHANGELOG.md`](CHANGELOG.md)。
+> **v3.8.20 → v3.8.53** 的近期亮點。完整歷史記錄請參閱 [`CHANGELOG.md`](CHANGELOG.md)。
 
 - **⚖️ `quota-weighted` 路由** — 第 20 種組合策略會略過配額已耗盡的帳戶，然後依剩餘配額 ÷ 處理中負載的比例，從其餘帳戶中抽選，同時讓現有對話固定於原帳戶。→ [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🧰 無介面模式** — `omniroute serve --headless`（或 `OMNIROUTE_HEADLESS=1`）僅執行 `/v1/*` 代理引擎，並停用儀表板及僅供儀表板使用的子系統。→ [無介面模式](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ omniroute configure codex          # 亦支援：claude opencode qwen aider goos
 
 </div>
 
-> **375 個已註冊提供者**，涵蓋標準聊天、媒體、搜尋、本機、雲端代理程式與系統集合，其中 **153 個帶有 `hasFree: true` 探索中繼資料**。聊天模型登錄檔涵蓋 **239 個提供者 / 3,059 組不同的提供者—模型配對 / 1,475 個原始模型 ID**；獨立的免費額度目錄則包含 **478 筆逐模型資料列**、**34 個週期性資源池**，以及 **52 個週期性／無需金鑰的永久免費提供者**。這些統計刻意採用不同的分母；定義與資源池去重後的計算方式請參閱[提供者參考資料](docs/reference/PROVIDER_REFERENCE.md)與[免費方案](docs/reference/FREE_TIERS.md)。
+> **375 個已註冊提供者**，涵蓋標準聊天、媒體、搜尋、本機、雲端代理程式與系統集合，其中 **153 個帶有 `hasFree: true` 探索中繼資料**。聊天模型登錄檔涵蓋 **239 個提供者 / 3,059 組不同的提供者—模型配對 / 1,475 個原始模型 ID**；獨立的免費額度目錄則包含 **467 筆逐模型資料列**、**34 個週期性資源池**，以及 **52 個週期性／無需金鑰的永久免費提供者**。這些統計刻意採用不同的分母；定義與資源池去重後的計算方式請參閱[提供者參考資料](docs/reference/PROVIDER_REFERENCE.md)與[免費方案](docs/reference/FREE_TIERS.md)。
 
 <div align="center">
 
@@ -1367,7 +1367,7 @@ OMNIROUTE_SKIP_POSTINSTALL=1 npm install -g omniroute   # CI=1 也會略過
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">韌性指南</a></b></td><td>斷路器、冷卻期、佇列、防止驚群效應、TLS 偽裝</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">自動組合引擎</a></b></td><td>16 因素評分、模式套件、自我修復</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Proxy 指南</a></b></td><td>3 層級 Proxy 系統、1proxy 市集、登錄檔 CRUD</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">免費方案</a></b></td><td>整合目錄：34 個已有文件記載的週期性資源池／478 個已收錄的免費方案項目</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">免費方案</a></b></td><td>整合目錄：34 個已有文件記載的週期性資源池／467 個已收錄的免費方案項目</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">功能展示</a></b></td><td>含螢幕擷取畫面的視覺化儀表板導覽</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">程式碼庫文件</a></b></td><td>適合初學者的程式碼庫導覽</td></tr>
 </table>
@@ -1810,7 +1810,7 @@ MIT 授權條款 - 詳情請參閱 [LICENSE](LICENSE)。
 
 **[⬆ 返回頂部](#-omniroute)** · 用 ❤️ 為開源 AI 社群打造。
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT 授權條款 · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT 授權條款 · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- 已啟用 GitHub Discussions，供社群問答使用 -->

@@ -25,9 +25,9 @@
 
 > **Kasutage oma teenusepakkujate kontosid.** See on eraldi kvalifitseeruvate kolmandate osapoolte tasuta pakettide hinnanguline kogumaht, mitte OmniRoute’i antav tokenikogus. Registreeruge, hankige vajaduse korral pääsuandmed ja ühendage teenusepakkujad, mida saate kasutada; iga teenusepakkuja määrab ise oma piirangud, saadavuse ja tingimused.
 >
-> Tasuta pakettide käsitsi ühendamine on vaevaline — kümned SDK-d, kümned kiiruspiirangud ja puudub ülevaade, kui palju mahtu teil tegelikult on. OmniRoute’i kataloog sisaldab **478 tasuta paketi kirjet 34 korduva kogumi võtme lõikes** ning arvutab tokenite põhinäitaja **17 kogumi põhjal, millel on avaldatud positiivne kuueelarve, millele lisanduvad viis mudelipõhist Groqi ülempiiri**, eemaldades ühise kogumi põhised duplikaadid. Kvoodid, mis avanevad alles pärast piirkondliku isiku tuvastamist (praegu: ModelScope), kuvatakse eraldi: +~6 mln pärast piirkondlikku isikusamasuse kontrolli, ning neid ei liideta kunagi põhinäitajale. Tulemus on alati nähtav juhtpaneelil (`/dashboard/free-tiers`).
+> Tasuta pakettide käsitsi ühendamine on vaevaline — kümned SDK-d, kümned kiiruspiirangud ja puudub ülevaade, kui palju mahtu teil tegelikult on. OmniRoute’i kataloog sisaldab **467 tasuta paketi kirjet 34 korduva kogumi võtme lõikes** ning arvutab tokenite põhinäitaja **17 kogumi põhjal, millel on avaldatud positiivne kuueelarve, millele lisanduvad viis mudelipõhist Groqi ülempiiri**, eemaldades ühise kogumi põhised duplikaadid. Kvoodid, mis avanevad alles pärast piirkondliku isiku tuvastamist (praegu: ModelScope), kuvatakse eraldi: +~6 mln pärast piirkondlikku isikusamasuse kontrolli, ning neid ei liideta kunagi põhinäitajale. Tulemus on alati nähtav juhtpaneelil (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute’i tasuta pakettide eelarvekaart: stabiilselt ~1,62 mld tasuta tokenit kuus, registreerumiskrediitidega esimesel kuul kuni ~2,22 mld, 34 dokumenteeritud korduva kogumi võtmest, mis hõlmavad ühe lõpp-punkti taga 478 kataloogitud tasuta paketi kirjet. Aus, kogumipõhiselt deduplikeeritud arvutus — iga jagatud kogumit arvestatakse üks kord, sealhulgas 17 korduvat kogumit, millel on avaldatud positiivne igakuine tokenieelarve, ning viis mudelipõhist Groqi ülempiiri; tingimuste riskikataloogis on 12 teenusepakkujat märgitud välditavaks, et saaksite ise otsustada. Eelarveriba sisaldab Mistrali 1 mld, Nara 210 mln, LLM7 150 mln, xKiro 150 mln, Groqi 30 mln (viis mudelipõhist ülempiiri) ja väiksemaid kogumeid; lisaks kuvatakse eraldi esimese kuu registreerumiskrediidid ning püsivalt tasuta ilma tokenipiiranguta teenusepakkujad, et need ei suurendaks kunagi põhinäitajat kunstlikult. Reaalajas kasutatud/järelejäänud maht lehel /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute’i tasuta pakettide eelarvekaart: stabiilselt ~1,62 mld tasuta tokenit kuus, registreerumiskrediitidega esimesel kuul kuni ~2,22 mld, 34 dokumenteeritud korduva kogumi võtmest, mis hõlmavad ühe lõpp-punkti taga 467 kataloogitud tasuta paketi kirjet. Aus, kogumipõhiselt deduplikeeritud arvutus — iga jagatud kogumit arvestatakse üks kord, sealhulgas 17 korduvat kogumit, millel on avaldatud positiivne igakuine tokenieelarve, ning viis mudelipõhist Groqi ülempiiri; tingimuste riskikataloogis on 12 teenusepakkujat märgitud välditavaks, et saaksite ise otsustada. Eelarveriba sisaldab Mistrali 1 mld, Nara 210 mln, LLM7 150 mln, xKiro 150 mln, Groqi 30 mln (viis mudelipõhist ülempiiri) ja väiksemaid kogumeid; lisaks kuvatakse eraldi esimese kuu registreerumiskrediidid ning püsivalt tasuta ilma tokenipiiranguta teenusepakkujad, et need ei suurendaks kunagi põhinäitajat kunstlikult. Reaalajas kasutatud/järelejäänud maht lehel /dashboard/free-tiers."/>
 
 > Reaalajas lehe `/dashboard/free-tiers` animeeritud kokkuvõte. Täielik metoodika (kogumite deduplikeerimine, krediiditasemed, teenusepakkujate tingimused): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                  |          v3.8.50           | **v3.8.51** |      `v3.8.52+`       |
+|                                  |          v3.8.50           | **v3.8.51** |      `v3.8.53+`       |
 | -------------------------------- | :------------------------: | :---------: | :-------------------: |
 | 🌐 Pakkujad                      |            352             |   **358**   |          375          |
 | 🧠 Unikaalsed vestlusmudeli ID-d |            1320            |  **1374**   |         1475          |
@@ -587,7 +587,7 @@ praeguse kataloogi kohta leiate teavet aadressilt **[radar.omniroute.online/plan
 
 </div>
 
-> Hiljutised olulisemad muudatused versioonides **v3.8.20 → v3.8.52**. Täielik ajalugu on failis [`CHANGELOG.md`](CHANGELOG.md).
+> Hiljutised olulisemad muudatused versioonides **v3.8.20 → v3.8.53**. Täielik ajalugu on failis [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ `quota-weighted` marsruutimine** — 20. kombostrateegia jätab ammendatud kontod vahele ja valib seejärel ülejäänute seast proportsionaalselt järelejäänud kvoodi ning poolelioleva koormuse suhtega, hoides olemasolevad vestlused kinnistatuna. → [Automaatne kombineerimine](docs/routing/AUTO-COMBO.md)
 - **🧰 Peata režiim** — `omniroute serve --headless` (või `OMNIROUTE_HEADLESS=1`) käitab ainult `/v1/*` puhverserveri mootorit, jättes juhtpaneeli ja ainult juhtpaneelile mõeldud alamsüsteemid välja. → [Peata režiim](docs/guides/HEADLESS.md)
@@ -700,7 +700,7 @@ teie shell'i ajaloost eemal. → [CLI-integratsioonid](docs/guides/CLI-INTEGRATI
 
 </div>
 
-> **375 registreeritud pakkujat** kanoonilistes vestluse, meedia, otsingu, kohalike, pilveagentide ja süsteemi kogudes, sealhulgas **153 pakkujat, mille avastusmetaandmetes on `hasFree: true`**. Vestlusmudelite register hõlmab **239 pakkujat / 3 059 erinevat pakkuja-mudeli paari / 1 475 töötlemata mudeli ID-d**; eraldi tasuta kasutusmahu kataloogis on **478 mudelipõhist rida**, **34 korduvat kogumit** ja **52 korduva või võtmeta igavesti tasuta pakkujat**. Need nimetajad on teadlikult erinevad; definitsioonid ja kogumite duplikaate eemaldavad arvutused leiate [pakkujate teatmikust](docs/reference/PROVIDER_REFERENCE.md) ja [tasuta kasutustasemete kirjeldusest](docs/reference/FREE_TIERS.md).
+> **375 registreeritud pakkujat** kanoonilistes vestluse, meedia, otsingu, kohalike, pilveagentide ja süsteemi kogudes, sealhulgas **153 pakkujat, mille avastusmetaandmetes on `hasFree: true`**. Vestlusmudelite register hõlmab **239 pakkujat / 3 059 erinevat pakkuja-mudeli paari / 1 475 töötlemata mudeli ID-d**; eraldi tasuta kasutusmahu kataloogis on **467 mudelipõhist rida**, **34 korduvat kogumit** ja **52 korduva või võtmeta igavesti tasuta pakkujat**. Need nimetajad on teadlikult erinevad; definitsioonid ja kogumite duplikaate eemaldavad arvutused leiate [pakkujate teatmikust](docs/reference/PROVIDER_REFERENCE.md) ja [tasuta kasutustasemete kirjeldusest](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1379,7 +1379,7 @@ Kanoonilised mõõdikud seisuga 2026-10-18: **1.976 unikaalset videot** · **20.
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Töökindluse juhend</a></b></td><td>Kaitselülitid, jahtumisajad, järjekord, päringutormi vältimine, TLS-i võltsimine</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Automaatkombinatsioonide mootor</a></b></td><td>16 teguriga hindamine, režiimipaketid, isetaastumine</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Puhverserveri juhend</a></b></td><td>3-tasemeline puhverserverisüsteem, 1proxy kauplemiskoht, registri CRUD</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Tasuta tasemed</a></b></td><td>Koondkataloog: 34 dokumenteeritud korduvkasutatavat ressursside kogumit / 478 kataloogitud tasuta taseme kirjet</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Tasuta tasemed</a></b></td><td>Koondkataloog: 34 dokumenteeritud korduvkasutatavat ressursside kogumit / 467 kataloogitud tasuta taseme kirjet</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Funktsioonide galerii</a></b></td><td>Visuaalne kuvatõmmistega töölaua tutvustus</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Koodibaasi dokumentatsioon</a></b></td><td>Algajasõbralik koodibaasi ülevaade</td></tr>
 </table>
@@ -1822,7 +1822,7 @@ MIT-litsents – üksikasju vaadake failist [LICENSE](LICENSE).
 
 **[⬆ Tagasi üles](#-omniroute)** · Loodud ❤️-ga avatud lähtekoodiga tehisintellekti kogukonnale.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT-litsents · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT-litsents · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions on kogukonna küsimuste ja vastuste jaoks lubatud -->

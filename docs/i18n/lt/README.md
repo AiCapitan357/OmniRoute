@@ -25,9 +25,9 @@
 
 > **Naudokite savo paslaugų teikėjų paskyras.** Tai yra apskaičiuota bendra atskirai prieinamų trečiųjų šalių nemokamų planų apimtis, o ne „OmniRoute“ suteikiami žetonai. Užsiregistruokite, prireikus gaukite prisijungimo duomenis ir prijunkite paslaugų teikėjus, kuriais galite naudotis; kiekvienas paslaugų teikėjas pats nustato savo limitus, prieinamumą ir sąlygas.
 >
-> Rankiniu būdu sujungti nemokamus planus sudėtinga — dešimtys SDK, dešimtys užklausų dažnio apribojimų ir jokio aiškumo, kiek išteklių iš tikrųjų turite. „OmniRoute“ kataloge yra **478 nemokamų planų įrašai, priklausantys 34 pasikartojančių telkinių raktams**, o bendras žetonų skaičius apskaičiuojamas pagal **17 telkinių su paskelbtu teigiamu mėnesiniu biudžetu ir penkis atskirų „Groq“ modelių limitus**, pašalinant bendrų telkinių dubliavimą. Kvotos, kurios suteikiamos tik patvirtinus regioninę tapatybę (šiuo metu: „ModelScope“), rodomos atskirai — dar ~6 mln. po regioninės tapatybės patvirtinimo — ir niekada neįtraukiamos į pagrindinį skaičių. Rezultatas visada matomas valdymo skydelyje (`/dashboard/free-tiers`).
+> Rankiniu būdu sujungti nemokamus planus sudėtinga — dešimtys SDK, dešimtys užklausų dažnio apribojimų ir jokio aiškumo, kiek išteklių iš tikrųjų turite. „OmniRoute“ kataloge yra **467 nemokamų planų įrašai, priklausantys 34 pasikartojančių telkinių raktams**, o bendras žetonų skaičius apskaičiuojamas pagal **17 telkinių su paskelbtu teigiamu mėnesiniu biudžetu ir penkis atskirų „Groq“ modelių limitus**, pašalinant bendrų telkinių dubliavimą. Kvotos, kurios suteikiamos tik patvirtinus regioninę tapatybę (šiuo metu: „ModelScope“), rodomos atskirai — dar ~6 mln. po regioninės tapatybės patvirtinimo — ir niekada neįtraukiamos į pagrindinį skaičių. Rezultatas visada matomas valdymo skydelyje (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="„OmniRoute“ nemokamų planų biudžeto kortelė: stabiliai ~1,62 mlrd. nemokamų žetonų per mėnesį ir iki ~2,22 mlrd. pirmąjį mėnesį su registracijos kreditais iš 34 dokumentuotų pasikartojančių telkinių raktų, apimančių 478 kataloge esančius nemokamų planų įrašus, pasiekiamus per vieną galinį tašką. Sąžiningas skaičiavimas pašalinant telkinių dubliavimą — kiekvienas bendras telkinys skaičiuojamas tik kartą, įskaitant 17 pasikartojančių telkinių su paskelbtu teigiamu mėnesiniu žetonų biudžetu ir penkis atskirų „Groq“ modelių limitus; sąlygų rizikos kataloge 12 paslaugų teikėjų pažymėti kaip vengtini, todėl sprendžiate jūs. Biudžeto juostoje nurodyti „Mistral“ 1 mlrd., „Nara“ 210 mln., „LLM7“ 150 mln., „xKiro“ 150 mln., „Groq“ 30 mln. (penki atskirų modelių limitai) ir mažesni telkiniai, taip pat pirmojo mėnesio registracijos kreditai ir atskirai pateikiami visam laikui nemokami paslaugų teikėjai be žetonų limito, kad jie niekada neišpūstų pagrindinio skaičiaus. Tiesioginiai panaudotų ir likusių žetonų duomenys puslapyje /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="„OmniRoute“ nemokamų planų biudžeto kortelė: stabiliai ~1,62 mlrd. nemokamų žetonų per mėnesį ir iki ~2,22 mlrd. pirmąjį mėnesį su registracijos kreditais iš 34 dokumentuotų pasikartojančių telkinių raktų, apimančių 467 kataloge esančius nemokamų planų įrašus, pasiekiamus per vieną galinį tašką. Sąžiningas skaičiavimas pašalinant telkinių dubliavimą — kiekvienas bendras telkinys skaičiuojamas tik kartą, įskaitant 17 pasikartojančių telkinių su paskelbtu teigiamu mėnesiniu žetonų biudžetu ir penkis atskirų „Groq“ modelių limitus; sąlygų rizikos kataloge 12 paslaugų teikėjų pažymėti kaip vengtini, todėl sprendžiate jūs. Biudžeto juostoje nurodyti „Mistral“ 1 mlrd., „Nara“ 210 mln., „LLM7“ 150 mln., „xKiro“ 150 mln., „Groq“ 30 mln. (penki atskirų modelių limitai) ir mažesni telkiniai, taip pat pirmojo mėnesio registracijos kreditai ir atskirai pateikiami visam laikui nemokami paslaugų teikėjai be žetonų limito, kad jie niekada neišpūstų pagrindinio skaičiaus. Tiesioginiai panaudotų ir likusių žetonų duomenys puslapyje /dashboard/free-tiers."/>
 
 > Tiesioginio `/dashboard/free-tiers` puslapio animuota santrauka. Visa metodika (telkinių dubliavimo šalinimas, kreditų lygiai, paslaugų teikėjų sąlygos): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                       |               v3.8.50               | **v3.8.51** |      `v3.8.52+`       |
+|                                       |               v3.8.50               | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------------------- | :---------------------------------: | :---------: | :-------------------: |
 | 🌐 Teikėjai                           |                 352                 |   **358**   |          375          |
 | 🧠 Unikalūs pokalbių modelių ID       |                1320                 |  **1374**   |         1475          |
@@ -586,7 +586,7 @@ dabartinį katalogą rasite **[radar.omniroute.online/planos](https://radar.omni
 
 </div>
 
-> Naujausi svarbiausi pakeitimai nuo **v3.8.20 → v3.8.52**. Visa istorija pateikta faile [`CHANGELOG.md`](CHANGELOG.md).
+> Naujausi svarbiausi pakeitimai nuo **v3.8.20 → v3.8.53**. Visa istorija pateikta faile [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ `quota-weighted` maršruto parinkimas** — 20-oji kombinuotoji strategija praleidžia paskyras, kurių kvota išnaudota, tada iš likusių renkasi proporcingai pagal likusią kvotą ÷ vykdomą apkrovą, o esami pokalbiai lieka susieti su tuo pačiu maršrutu. → [Automatiniai deriniai](docs/routing/AUTO-COMBO.md)
 - **🧰 Begalvė veiksena** — `omniroute serve --headless` (arba `OMNIROUTE_HEADLESS=1`) paleidžia tik `/v1/*` tarpinio serverio modulį, išjungdamas valdymo skydelį ir tik jam skirtas posistemes. → [Begalvė veiksena](docs/guides/HEADLESS.md)
@@ -699,7 +699,7 @@ patekti į jūsų apvalkalo istoriją. → [CLI integracijos](docs/guides/CLI-IN
 
 </div>
 
-> **375 registruoti teikėjai** kanoniniuose pokalbių, medijos, paieškos, vietinių, debesijos agentų ir sistemos rinkiniuose, įskaitant **153 su `hasFree: true` aptikimo metaduomenimis**. Pokalbių modelių registre yra **239 teikėjai / 3 059 skirtingos teikėjo ir modelio poros / 1 475 neapdoroti modelių ID**; atskirame nemokamų limitų kataloge yra **478 kiekvienam modeliui skirtos eilutės**, **34 periodiškai atnaujinami išteklių fondai** ir **52 periodiškai atnaujinami arba rakto nereikalaujantys visam laikui nemokami teikėjai**. Šie vardikliai skiriasi sąmoningai; apibrėžtys ir skaičiavimai, kuriuose išteklių fondų dublikatai pašalinti, pateikti [Teikėjų žinyne](docs/reference/PROVIDER_REFERENCE.md) ir [Nemokamuose planuose](docs/reference/FREE_TIERS.md).
+> **375 registruoti teikėjai** kanoniniuose pokalbių, medijos, paieškos, vietinių, debesijos agentų ir sistemos rinkiniuose, įskaitant **153 su `hasFree: true` aptikimo metaduomenimis**. Pokalbių modelių registre yra **239 teikėjai / 3 059 skirtingos teikėjo ir modelio poros / 1 475 neapdoroti modelių ID**; atskirame nemokamų limitų kataloge yra **467 kiekvienam modeliui skirtos eilutės**, **34 periodiškai atnaujinami išteklių fondai** ir **52 periodiškai atnaujinami arba rakto nereikalaujantys visam laikui nemokami teikėjai**. Šie vardikliai skiriasi sąmoningai; apibrėžtys ir skaičiavimai, kuriuose išteklių fondų dublikatai pašalinti, pateikti [Teikėjų žinyne](docs/reference/PROVIDER_REFERENCE.md) ir [Nemokamuose planuose](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1379,7 +1379,7 @@ Kanoninės metrikos 2026-10-18: **1.976 unikalūs vaizdo įrašai** · **20.220.
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Atsparumo vadovas</a></b></td><td>Grandinės pertraukikliai, atvėsimo laikotarpiai, eilė, apsauga nuo vienalaikių užklausų antplūdžio, TLS klastojimas</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Automatinio derinimo variklis</a></b></td><td>16 veiksnių vertinimas, režimų paketai, savaiminis atkūrimas</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Tarpinio serverio vadovas</a></b></td><td>3 lygių tarpinių serverių sistema, 1proxy prekyvietė, registro CRUD</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Nemokami planai</a></b></td><td>Suvestinis katalogas: 34 dokumentuoti pasikartojantys išteklių telkiniai / 478 kataloguoti nemokamų planų įrašai</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Nemokami planai</a></b></td><td>Suvestinis katalogas: 34 dokumentuoti pasikartojantys išteklių telkiniai / 467 kataloguoti nemokamų planų įrašai</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Funkcijų galerija</a></b></td><td>Vaizdinė valdymo skydelio apžvalga su ekrano kopijomis</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Kodo bazės dokumentacija</a></b></td><td>Pradedantiesiems pritaikyta kodo bazės apžvalga</td></tr>
 </table>
@@ -1822,7 +1822,7 @@ MIT licencija – išsamesnę informaciją rasite faile [LICENSE](LICENSE).
 
 **[⬆ Atgal į viršų](#-omniroute)** · Sukurta su ❤️ atvirojo kodo DI bendruomenei.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT licencija · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT licencija · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions įjungta bendruomenės klausimams ir atsakymams -->

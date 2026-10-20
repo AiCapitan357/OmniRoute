@@ -25,9 +25,9 @@
 
 > **Uporabite lastne račune pri ponudnikih.** To je ocenjena skupna količina ločeno razpoložljivih brezplačnih paketov tretjih ponudnikov, ne pa dodelitev žetonov s strani OmniRoute. Registrirajte se, po potrebi pridobite poverilnice in povežite ponudnike, ki jih lahko uporabljate; vsak ponudnik določa svoje omejitve, razpoložljivost in pogoje.
 >
-> Ročno združevanje brezplačnih paketov je naporno — na desetine SDK-jev, na desetine omejitev hitrosti in nobenega pregleda nad tem, koliko dejansko imate na voljo. OmniRoute katalogizira **478 vnosov brezplačnih paketov v 34 ponavljajočih se ključih skupin** in izračuna skupno število žetonov na podlagi **17 skupin z objavljenim pozitivnim mesečnim proračunom ter petih omejitev Groq na posamezen model**, pri čemer odstrani podvojene vnose glede na skupno skupino. Kvote, ki se odklenejo šele po regionalnem preverjanju identitete (trenutno: ModelScope), so prikazane ločeno kot dodatnih ~6M za regionalnim preverjanjem identitete in se nikoli ne prištevajo k skupnemu številu. Rezultat ostaja viden na nadzorni plošči (`/dashboard/free-tiers`).
+> Ročno združevanje brezplačnih paketov je naporno — na desetine SDK-jev, na desetine omejitev hitrosti in nobenega pregleda nad tem, koliko dejansko imate na voljo. OmniRoute katalogizira **467 vnosov brezplačnih paketov v 34 ponavljajočih se ključih skupin** in izračuna skupno število žetonov na podlagi **17 skupin z objavljenim pozitivnim mesečnim proračunom ter petih omejitev Groq na posamezen model**, pri čemer odstrani podvojene vnose glede na skupno skupino. Kvote, ki se odklenejo šele po regionalnem preverjanju identitete (trenutno: ModelScope), so prikazane ločeno kot dodatnih ~6M za regionalnim preverjanjem identitete in se nikoli ne prištevajo k skupnemu številu. Rezultat ostaja viden na nadzorni plošči (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kartica proračuna brezplačnih paketov OmniRoute: stalno ~1.62B brezplačnih žetonov na mesec, do ~2.22B v prvem mesecu z dobroimetjem ob registraciji, iz 34 dokumentiranih ponavljajočih se ključev skupin, ki prek ene končne točke pokrivajo 478 katalogiziranih vnosov brezplačnih paketov. Pošten izračun z odstranjevanjem podvojenih skupin — vsaka skupna skupina je šteta enkrat, vključno s 17 ponavljajočimi se skupinami z objavljenim pozitivnim mesečnim proračunom žetonov ter petimi omejitvami Groq na posamezen model; 12 ponudnikov je v katalogu tveganj glede pogojev označenih kot neprimernih, zato se odločite sami. Vrstica proračuna vključuje Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (pet omejitev na posamezen model) in manjše skupine, poleg tega pa še dobroimetje ob registraciji za prvi mesec ter trajno brezplačne ponudnike brez omejitve žetonov, ki so prikazani ločeno, zato nikoli ne napihujejo skupnega števila. Trenutna poraba/preostanek na /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kartica proračuna brezplačnih paketov OmniRoute: stalno ~1.62B brezplačnih žetonov na mesec, do ~2.22B v prvem mesecu z dobroimetjem ob registraciji, iz 34 dokumentiranih ponavljajočih se ključev skupin, ki prek ene končne točke pokrivajo 467 katalogiziranih vnosov brezplačnih paketov. Pošten izračun z odstranjevanjem podvojenih skupin — vsaka skupna skupina je šteta enkrat, vključno s 17 ponavljajočimi se skupinami z objavljenim pozitivnim mesečnim proračunom žetonov ter petimi omejitvami Groq na posamezen model; 12 ponudnikov je v katalogu tveganj glede pogojev označenih kot neprimernih, zato se odločite sami. Vrstica proračuna vključuje Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (pet omejitev na posamezen model) in manjše skupine, poleg tega pa še dobroimetje ob registraciji za prvi mesec ter trajno brezplačne ponudnike brez omejitve žetonov, ki so prikazani ločeno, zato nikoli ne napihujejo skupnega števila. Trenutna poraba/preostanek na /dashboard/free-tiers."/>
 
 > Animirani povzetek strani `/dashboard/free-tiers` v živo. Celotna metodologija (odstranjevanje podvojenih skupin, ravni dobroimetja, pogoji ponudnikov): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                     |        v3.8.50        | **v3.8.51** |      `v3.8.52+`       |
+|                                     |        v3.8.50        | **v3.8.51** |      `v3.8.53+`       |
 | ----------------------------------- | :-------------------: | :---------: | :-------------------: |
 | 🌐 Ponudniki                        |          352          |   **358**   |          375          |
 | 🧠 Enolični ID-ji modelov za klepet |         1320          |  **1374**   |         1475          |
@@ -586,7 +586,7 @@ trenutnem katalogu najdete na **[radar.omniroute.online/planos](https://radar.om
 
 </div>
 
-> Nedavni poudarki različic **v3.8.20 → v3.8.52**. Celotna zgodovina je v [`CHANGELOG.md`](CHANGELOG.md).
+> Nedavni poudarki različic **v3.8.20 → v3.8.53**. Celotna zgodovina je v [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Usmerjanje `quota-weighted`** — 20. strategija kombiniranja preskoči račune z izčrpano kvoto, nato pa med preostalimi izbira sorazmerno glede na preostalo kvoto ÷ trenutno obremenitev, pri čemer obstoječi pogovori ostanejo pripeti. → [Samodejno kombiniranje](docs/routing/AUTO-COMBO.md)
 - **🧰 Brezglavi način** — `omniroute serve --headless` (ali `OMNIROUTE_HEADLESS=1`) izvaja samo posredniški mehanizem `/v1/*`, nadzorna plošča in podsistemi, namenjeni izključno njej, pa so izklopljeni. → [Brezglavi način](docs/guides/HEADLESS.md)
@@ -699,7 +699,7 @@ končale v zgodovini vaše lupine. → [Integracije CLI](docs/guides/CLI-INTEGRA
 
 </div>
 
-> **375 registriranih ponudnikov** v kanoničnih zbirkah za klepet, medije, iskanje, lokalne storitve, agente v oblaku in sistemske storitve, med katerimi jih ima **153 metapodatke za odkrivanje `hasFree: true`**. Register modelov za klepet zajema **239 ponudnikov / 3.059 različnih parov ponudnik–model / 1.475 neobdelanih ID-jev modelov**; ločeni katalog brezplačnih kvot ima **478 vrstic za posamezne modele**, **34 ponavljajočih se skupnih kvot** in **52 ponudnikov s ponavljajočo se ali brezključno trajno brezplačno uporabo**. Ti imenovalci so namenoma različni; definicije in izračuni z odstranjenimi podvojenimi skupnimi kvotami so na voljo v dokumentih [Referenca ponudnikov](docs/reference/PROVIDER_REFERENCE.md) in [Brezplačne ravni](docs/reference/FREE_TIERS.md).
+> **375 registriranih ponudnikov** v kanoničnih zbirkah za klepet, medije, iskanje, lokalne storitve, agente v oblaku in sistemske storitve, med katerimi jih ima **153 metapodatke za odkrivanje `hasFree: true`**. Register modelov za klepet zajema **239 ponudnikov / 3.059 različnih parov ponudnik–model / 1.475 neobdelanih ID-jev modelov**; ločeni katalog brezplačnih kvot ima **467 vrstic za posamezne modele**, **34 ponavljajočih se skupnih kvot** in **52 ponudnikov s ponavljajočo se ali brezključno trajno brezplačno uporabo**. Ti imenovalci so namenoma različni; definicije in izračuni z odstranjenimi podvojenimi skupnimi kvotami so na voljo v dokumentih [Referenca ponudnikov](docs/reference/PROVIDER_REFERENCE.md) in [Brezplačne ravni](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1377,7 +1377,7 @@ Kanonične metrike na dan 2026-10-18: **1.976 edinstvenih videoposnetkov** · **
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Priročnik za odpornost</a></b></td><td>Odklopniki, obdobja ohlajanja, čakalna vrsta, preprečevanje stampeda zahtev, lažno predstavljanje TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Mehanizem Auto-Combo</a></b></td><td>Ocenjevanje s 16 dejavniki, paketi načinov, samodejno odpravljanje napak</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Priročnik za posredniški strežnik</a></b></td><td>Tristopenjski sistem posredniških strežnikov, tržnica 1proxy, operacije CRUD registra</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Brezplačne ravni</a></b></td><td>Združeni imenik: 34 dokumentiranih ponavljajočih se naborov / 478 katalogiziranih vnosov brezplačnih ravni</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Brezplačne ravni</a></b></td><td>Združeni imenik: 34 dokumentiranih ponavljajočih se naborov / 467 katalogiziranih vnosov brezplačnih ravni</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Galerija funkcij</a></b></td><td>Vizualni ogled nadzorne plošče s posnetki zaslona</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Dokumentacija izvorne kode</a></b></td><td>Začetnikom prijazen pregled izvorne kode</td></tr>
 </table>
@@ -1820,7 +1820,7 @@ Licenca MIT – za podrobnosti glejte [LICENSE](LICENSE).
 
 **[⬆ Nazaj na vrh](#-omniroute)** · Ustvarjeno z ❤️ za odprtokodno skupnost umetne inteligence.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Licenca MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Licenca MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- Razprave GitHub so omogočene za vprašanja in odgovore skupnosti -->

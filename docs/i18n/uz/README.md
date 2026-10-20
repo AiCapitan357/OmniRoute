@@ -25,9 +25,9 @@
 
 > **Oʻz provayder hisoblaringizdan foydalaning.** Bu OmniRoute tomonidan beriladigan tokenlar emas, balki alohida talablariga javob berishingiz mumkin boʻlgan uchinchi tomon bepul tariflarining taxminiy umumiy miqdoridir. Roʻyxatdan oʻting, kerakli joylarda hisob maʼlumotlarini oling va foydalanishingiz mumkin boʻlgan provayderlarni ulang; har bir provayder oʻz cheklovlari, mavjudligi va shartlarini mustaqil boshqaradi.
 >
-> Bepul tariflarni qoʻlda birlashtirish juda qiyin — oʻnlab SDKlar, oʻnlab tezlik cheklovlari va aslida qancha resursingiz borligi haqida hech qanday tasavvur yoʻq. OmniRoute **34 ta takrorlanuvchi havza kalitidagi 478 ta bepul tarif yozuvini** kataloglaydi va tokenlar haqidagi asosiy koʻrsatkichni **eʼlon qilingan musbat oylik byudjetga ega 17 ta havza hamda har bir model uchun beshta Groq cheklovi** asosida, umumiy havzalar boʻyicha takrorlarni olib tashlagan holda hisoblaydi. Faqat hududiy shaxsni tasdiqlashdan keyin ochiladigan kvotalar (hozirda: ModelScope) alohida koʻrsatiladi — hududiy shaxsni tasdiqlash ortida +~6M — va ular hech qachon asosiy koʻrsatkichga qoʻshilmaydi. Natija boshqaruv panelida (`/dashboard/free-tiers`) doim koʻrinib turadi.
+> Bepul tariflarni qoʻlda birlashtirish juda qiyin — oʻnlab SDKlar, oʻnlab tezlik cheklovlari va aslida qancha resursingiz borligi haqida hech qanday tasavvur yoʻq. OmniRoute **34 ta takrorlanuvchi havza kalitidagi 467 ta bepul tarif yozuvini** kataloglaydi va tokenlar haqidagi asosiy koʻrsatkichni **eʼlon qilingan musbat oylik byudjetga ega 17 ta havza hamda har bir model uchun beshta Groq cheklovi** asosida, umumiy havzalar boʻyicha takrorlarni olib tashlagan holda hisoblaydi. Faqat hududiy shaxsni tasdiqlashdan keyin ochiladigan kvotalar (hozirda: ModelScope) alohida koʻrsatiladi — hududiy shaxsni tasdiqlash ortida +~6M — va ular hech qachon asosiy koʻrsatkichga qoʻshilmaydi. Natija boshqaruv panelida (`/dashboard/free-tiers`) doim koʻrinib turadi.
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute bepul tarif byudjeti kartasi: barqaror ravishda oyiga ~1,62 mlrd bepul token, roʻyxatdan oʻtish kreditlari bilan birinchi oyda ~2,22 mlrd gacha; bular bitta yakuniy nuqta ortidagi 478 ta kataloglangan bepul tarif yozuvini qamrab oluvchi 34 ta hujjatlashtirilgan takrorlanuvchi havza kalitidan olinadi. Umumiy havzalar takrorlanmaydigan halol hisob-kitob — har bir umumiy havza faqat bir marta hisoblanadi, jumladan eʼlon qilingan musbat oylik token byudjetiga ega 17 ta takrorlanuvchi havza hamda har bir model uchun beshta Groq cheklovi; shartlar xavfi katalogida 12 ta provayder chetlab oʻtilishi kerak deb belgilangan, shuning uchun qarorni oʻzingiz qabul qilasiz. Byudjet paneliga Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (har bir model uchun beshta cheklov) va kichikroq havzalar kiradi; shuningdek, birinchi oydagi roʻyxatdan oʻtish kreditlari hamda doimiy bepul, token cheklovisiz provayderlar alohida koʻrsatiladi, shunda ular asosiy koʻrsatkichni sunʼiy ravishda oshirmaydi. Ishlatilgan/qolgan miqdorlar /dashboard/free-tiers sahifasida jonli koʻrsatiladi."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute bepul tarif byudjeti kartasi: barqaror ravishda oyiga ~1,62 mlrd bepul token, roʻyxatdan oʻtish kreditlari bilan birinchi oyda ~2,22 mlrd gacha; bular bitta yakuniy nuqta ortidagi 467 ta kataloglangan bepul tarif yozuvini qamrab oluvchi 34 ta hujjatlashtirilgan takrorlanuvchi havza kalitidan olinadi. Umumiy havzalar takrorlanmaydigan halol hisob-kitob — har bir umumiy havza faqat bir marta hisoblanadi, jumladan eʼlon qilingan musbat oylik token byudjetiga ega 17 ta takrorlanuvchi havza hamda har bir model uchun beshta Groq cheklovi; shartlar xavfi katalogida 12 ta provayder chetlab oʻtilishi kerak deb belgilangan, shuning uchun qarorni oʻzingiz qabul qilasiz. Byudjet paneliga Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (har bir model uchun beshta cheklov) va kichikroq havzalar kiradi; shuningdek, birinchi oydagi roʻyxatdan oʻtish kreditlari hamda doimiy bepul, token cheklovisiz provayderlar alohida koʻrsatiladi, shunda ular asosiy koʻrsatkichni sunʼiy ravishda oshirmaydi. Ishlatilgan/qolgan miqdorlar /dashboard/free-tiers sahifasida jonli koʻrsatiladi."/>
 
 > Jonli `/dashboard/free-tiers` sahifasining animatsiyali qisqacha koʻrinishi. Toʻliq metodologiya (havzalardagi takrorlarni olib tashlash, kredit darajalari, provayder shartlari): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                           |          v3.8.50          | **v3.8.51** |      `v3.8.52+`       |
+|                                           |          v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | ----------------------------------------- | :-----------------------: | :---------: | :-------------------: |
 | 🌐 Provayderlar                           |            352            |   **358**   |          375          |
 | 🧠 Noyob chat modeli ID’lari              |           1320            |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ Radar ixtiyoriy ravishda yoqiladi va faqat GET so‘rovlaridan foydalanadi. Omni
 
 </div>
 
-> **v3.8.20 → v3.8.52** versiyalaridagi soʻnggi muhim yangiliklar. Toʻliq tarix [`CHANGELOG.md`](CHANGELOG.md) faylida.
+> **v3.8.20 → v3.8.53** versiyalaridagi soʻnggi muhim yangiliklar. Toʻliq tarix [`CHANGELOG.md`](CHANGELOG.md) faylida.
 
 - **⚖️ `quota-weighted` marshrutlash** — 20-kombinatsiya strategiyasi kvotasi tugagan hisoblarni oʻtkazib yuboradi, soʻng qolganlari orasidan qoldiq kvota ÷ bajarilayotgan yuk nisbatiga mutanosib ravishda tanlaydi va mavjud suhbatlarni biriktirilgan holda saqlaydi. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🧰 Interfeyssiz rejim** — `omniroute serve --headless` (yoki `OMNIROUTE_HEADLESS=1`) faqat `/v1/*` proksi mexanizmini ishga tushiradi, boshqaruv paneli va faqat unga tegishli quyi tizimlar esa oʻchiriladi. → [Interfeyssiz rejim](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ shell tarixingizdan tashqarida saqlaydi. → [CLI integratsiyalari](docs/guides/
 
 </div>
 
-> Kanonik chat, media, qidiruv, lokal, bulut agenti va tizim kolleksiyalarida **375 ta roʻyxatdan oʻtgan provayder**, jumladan **`hasFree: true` aniqlash metamaʼlumotiga ega 153 tasi** mavjud. Chat modellari reyestri **239 ta provayder / 3 059 ta alohida provayder-model juftligi / 1 475 ta xom model IDsi**ni qamrab oladi; alohida bepul budjet katalogida **har bir model uchun 478 ta qator**, **34 ta takrorlanuvchi pul** va **52 ta takrorlanuvchi/kalitsiz doimiy bepul provayder** mavjud. Bular ataylab turli maxrajlardan foydalanadi; taʼriflar va takroriy pullar chiqarib tashlangan hisob-kitoblar [Provayderlar maʼlumotnomasi](docs/reference/PROVIDER_REFERENCE.md) hamda [Bepul tariflar](docs/reference/FREE_TIERS.md) sahifalarida keltirilgan.
+> Kanonik chat, media, qidiruv, lokal, bulut agenti va tizim kolleksiyalarida **375 ta roʻyxatdan oʻtgan provayder**, jumladan **`hasFree: true` aniqlash metamaʼlumotiga ega 153 tasi** mavjud. Chat modellari reyestri **239 ta provayder / 3 059 ta alohida provayder-model juftligi / 1 475 ta xom model IDsi**ni qamrab oladi; alohida bepul budjet katalogida **har bir model uchun 467 ta qator**, **34 ta takrorlanuvchi pul** va **52 ta takrorlanuvchi/kalitsiz doimiy bepul provayder** mavjud. Bular ataylab turli maxrajlardan foydalanadi; taʼriflar va takroriy pullar chiqarib tashlangan hisob-kitoblar [Provayderlar maʼlumotnomasi](docs/reference/PROVIDER_REFERENCE.md) hamda [Bepul tariflar](docs/reference/FREE_TIERS.md) sahifalarida keltirilgan.
 
 <div align="center">
 
@@ -1367,7 +1367,7 @@ bitta jarayon xizmat koʻrsatadi, shu sababli hozircha faqat CLI uchun alohida p
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Barqarorlik qoʻllanmasi</a></b></td><td>Oʻchirgichlar, sovish davrlari, navbat, birdaniga yopirilishning oldini olish, TLS qalbakilashtirish</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Auto-Combo mexanizmi</a></b></td><td>16 omilli baholash, rejim paketlari, oʻz-oʻzini tiklash</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Proksi qoʻllanmasi</a></b></td><td>3 darajali proksi tizimi, 1proxy bozori, reyestr CRUD operatsiyalari</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Bepul darajalar</a></b></td><td>Birlashtirilgan katalog: hujjatlashtirilgan 34 ta takroriy resurs havzasi / kataloglangan 478 ta bepul daraja yozuvi</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Bepul darajalar</a></b></td><td>Birlashtirilgan katalog: hujjatlashtirilgan 34 ta takroriy resurs havzasi / kataloglangan 467 ta bepul daraja yozuvi</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Imkoniyatlar galereyasi</a></b></td><td>Skrinshotlar bilan boshqaruv panelining vizual sharhi</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Kod bazasi hujjatlari</a></b></td><td>Yangi boshlovchilar uchun kod bazasi boʻylab qoʻllanma</td></tr>
 </table>
@@ -1810,7 +1810,7 @@ MIT litsenziyasi — batafsil maʼlumot uchun [LICENSE](LICENSE) fayliga qarang.
 
 **[⬆ Yuqoriga qaytish](#-omniroute)** · Ochiq kodli sunʼiy intellekt hamjamiyati uchun ❤️ bilan yaratildi.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT litsenziyasi · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT litsenziyasi · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- Hamjamiyatning savol-javoblari uchun GitHub Discussions yoqilgan -->

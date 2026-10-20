@@ -25,9 +25,9 @@
 
 > **Használd a saját szolgáltatói fiókjaidat.** Ez a külön-külön igénybe vehető, harmadik felek által biztosított ingyenes csomagok becsült összesített mennyisége, nem pedig az OmniRoute által nyújtott tokenkeret. Regisztrálj, szerezd be a szükséges hitelesítő adatokat, és csatlakoztasd az általad használható szolgáltatókat; minden szolgáltató maga határozza meg a korlátait, elérhetőségét és feltételeit.
 >
-> Az ingyenes csomagok kézi összevonása nehézkes — több tucat SDK, több tucat sebességkorlát, és fogalmad sincs, valójában mekkora kerettel rendelkezel. Az OmniRoute **478 ingyenes csomagbejegyzést tart nyilván 34 ismétlődő keretkulcshoz**, és a tokenek főösszegét a **17, közzétett pozitív havi kerettel rendelkező készletből, valamint öt modellenkénti Groq-korlátból** számítja ki, a megosztott készletek szerinti duplikációk eltávolításával. A csak regionális személyazonosság-ellenőrzés után elérhető kvóták (jelenleg: ModelScope) külön jelennek meg, +~6M regionális személyazonosság-ellenőrzéshez kötve, és soha nem számítanak bele a főösszegbe. Az eredmény folyamatosan látható az irányítópulton (`/dashboard/free-tiers`).
+> Az ingyenes csomagok kézi összevonása nehézkes — több tucat SDK, több tucat sebességkorlát, és fogalmad sincs, valójában mekkora kerettel rendelkezel. Az OmniRoute **467 ingyenes csomagbejegyzést tart nyilván 34 ismétlődő keretkulcshoz**, és a tokenek főösszegét a **17, közzétett pozitív havi kerettel rendelkező készletből, valamint öt modellenkénti Groq-korlátból** számítja ki, a megosztott készletek szerinti duplikációk eltávolításával. A csak regionális személyazonosság-ellenőrzés után elérhető kvóták (jelenleg: ModelScope) külön jelennek meg, +~6M regionális személyazonosság-ellenőrzéshez kötve, és soha nem számítanak bele a főösszegbe. Az eredmény folyamatosan látható az irányítópulton (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute ingyenes keretkártya: stabilan havi ~1,62 milliárd ingyenes token, a regisztrációs jóváírásokkal pedig akár ~2,22 milliárd az első hónapban, 34 dokumentált, ismétlődő keretkulcsból, amelyek 478 katalogizált ingyenes csomagbejegyzést fednek le egyetlen végpont mögött. Korrekt, készletenként duplikációmentes számítás — minden megosztott készlet csak egyszer számít, beleértve a 17, közzétett pozitív havi tokenkerettel rendelkező ismétlődő készletet, valamint öt modellenkénti Groq-korlátot; a feltételkockázati katalógusban 12 szolgáltató kerülendőként van megjelölve, így te dönthetsz. A keretsáv tartalmazza a Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (öt modellenkénti korlát) és kisebb készleteket, továbbá az első havi regisztrációs jóváírásokat; a tartósan ingyenes, tokenkorlát nélküli szolgáltatók külön jelennek meg, így soha nem növelik mesterségesen a főösszeget. Élő felhasznált/fennmaradó mennyiség: /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute ingyenes keretkártya: stabilan havi ~1,62 milliárd ingyenes token, a regisztrációs jóváírásokkal pedig akár ~2,22 milliárd az első hónapban, 34 dokumentált, ismétlődő keretkulcsból, amelyek 467 katalogizált ingyenes csomagbejegyzést fednek le egyetlen végpont mögött. Korrekt, készletenként duplikációmentes számítás — minden megosztott készlet csak egyszer számít, beleértve a 17, közzétett pozitív havi tokenkerettel rendelkező ismétlődő készletet, valamint öt modellenkénti Groq-korlátot; a feltételkockázati katalógusban 12 szolgáltató kerülendőként van megjelölve, így te dönthetsz. A keretsáv tartalmazza a Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (öt modellenkénti korlát) és kisebb készleteket, továbbá az első havi regisztrációs jóváírásokat; a tartósan ingyenes, tokenkorlát nélküli szolgáltatók külön jelennek meg, így soha nem növelik mesterségesen a főösszeget. Élő felhasznált/fennmaradó mennyiség: /dashboard/free-tiers."/>
 
 > Az élő `/dashboard/free-tiers` oldal animált összefoglalója. Teljes módszertan (készletek duplikációmentesítése, jóváírási szintek, szolgáltatói feltételek): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                    |          v3.8.50           | **v3.8.51** |      `v3.8.52+`       |
+|                                    |          v3.8.50           | **v3.8.51** |      `v3.8.53+`       |
 | ---------------------------------- | :------------------------: | :---------: | :-------------------: |
 | 🌐 Szolgáltatók                    |            352             |   **358**   |          375          |
 | 🧠 Egyedi csevegőmodell-azonosítók |            1320            |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ A Radar használata opcionális, és kizárólag GET-kéréseket alkalmaz. Az Om
 
 </div>
 
-> A **v3.8.20 → v3.8.52** verziók legfontosabb újdonságai. A teljes előzmény a [`CHANGELOG.md`](CHANGELOG.md) fájlban található.
+> A **v3.8.20 → v3.8.53** verziók legfontosabb újdonságai. A teljes előzmény a [`CHANGELOG.md`](CHANGELOG.md) fájlban található.
 
 - **⚖️ `quota-weighted` útválasztás** — a 20. kombinált stratégia kihagyja a kimerített fiókokat, majd a fennmaradókból a megmaradt kvóta ÷ folyamatban lévő terhelés arányában választ, miközben a meglévő beszélgetéseket a kiválasztott útvonalon tartja. → [Automatikus kombináció](docs/routing/AUTO-COMBO.md)
 - **🧰 Headless mód** — az `omniroute serve --headless` (vagy az `OMNIROUTE_HEADLESS=1`) csak a `/v1/*` proxymotort futtatja, az irányítópult és a kizárólag ahhoz tartozó alrendszerek nélkül. → [Headless mód](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ a shell előzményeitől. → [CLI-integrációk](docs/guides/CLI-INTEGRATIONS.m
 
 </div>
 
-> **375 regisztrált szolgáltató** a kanonikus csevegési, média-, keresési, helyi, felhőügynök- és rendszergyűjteményekben, amelyek közül **153 rendelkezik `hasFree: true` felderítési metaadattal**. A csevegésimodell-nyilvántartás **239 szolgáltatót / 3 059 különálló szolgáltató–modell párt / 1 475 nyers modellazonosítót** tartalmaz; a különálló ingyenes keretkatalógusban **478 modellenkénti sor**, **34 megújuló keret** és **52 megújuló vagy kulcs nélkül használható, örökre ingyenes szolgáltató** található. Ezek a nevezők szándékosan eltérnek egymástól; a definíciók és a keretek alapján duplikációmentesített számítások a [Szolgáltatói referenciában](docs/reference/PROVIDER_REFERENCE.md) és az [Ingyenes csomagok](docs/reference/FREE_TIERS.md) dokumentumban találhatók.
+> **375 regisztrált szolgáltató** a kanonikus csevegési, média-, keresési, helyi, felhőügynök- és rendszergyűjteményekben, amelyek közül **153 rendelkezik `hasFree: true` felderítési metaadattal**. A csevegésimodell-nyilvántartás **239 szolgáltatót / 3 059 különálló szolgáltató–modell párt / 1 475 nyers modellazonosítót** tartalmaz; a különálló ingyenes keretkatalógusban **467 modellenkénti sor**, **34 megújuló keret** és **52 megújuló vagy kulcs nélkül használható, örökre ingyenes szolgáltató** található. Ezek a nevezők szándékosan eltérnek egymástól; a definíciók és a keretek alapján duplikációmentesített számítások a [Szolgáltatói referenciában](docs/reference/PROVIDER_REFERENCE.md) és az [Ingyenes csomagok](docs/reference/FREE_TIERS.md) dokumentumban találhatók.
 
 <div align="center">
 
@@ -1367,7 +1367,7 @@ Kanonikus mérőszámok 2026-10-18-án: **1.976 egyedi videó** · **20.220.289 
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Ellenálló képességi útmutató</a></b></td><td>Áramkör-megszakítók, lehűlési idők, várólista, egyidejű kéréshullámok elleni védelem, TLS-megszemélyesítés</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Automatikus kombinációs motor</a></b></td><td>16 tényezős pontozás, módcsomagok, öngyógyítás</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Proxyútmutató</a></b></td><td>Háromszintű proxyrendszer, 1proxy piactér, beállításjegyzék-CRUD</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Ingyenes csomagok</a></b></td><td>Összesített jegyzék: 34 dokumentált, ismétlődően elérhető erőforráskészlet / 478 katalogizált ingyenes csomagbejegyzés</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Ingyenes csomagok</a></b></td><td>Összesített jegyzék: 34 dokumentált, ismétlődően elérhető erőforráskészlet / 467 katalogizált ingyenes csomagbejegyzés</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Funkciógaléria</a></b></td><td>Az irányítópult képernyőképekkel illusztrált bemutatása</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">A kódbázis dokumentációja</a></b></td><td>Kezdőbarát útmutató a kódbázishoz</td></tr>
 </table>
@@ -1810,7 +1810,7 @@ MIT-licenc – a részletekért lásd: [LICENSE](LICENSE).
 
 **[⬆ Vissza a tetejére](#-omniroute)** · ❤️-vel készült a nyílt forráskódú MI-közösség számára.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT-licenc · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT-licenc · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- A GitHub Discussions engedélyezve van a közösségi kérdésekhez és válaszokhoz -->

@@ -25,9 +25,9 @@
 
 > **Tabhair leat do chuntais soláthraithe féin.** Is meastachán comhiomlán é seo thar shraitheanna saor in aisce tríú páirtí a bhfuil incháilitheacht ar leith acu, ní deontas comharthaí ó OmniRoute. Cláraigh, faigh dintiúir nuair is gá, agus ceangail na soláthraithe is féidir leat a úsáid; rialaíonn gach soláthraí a theorainneacha, a infhaighteacht agus a théarmaí féin.
 >
-> Is mór an crá é sraitheanna saor in aisce a chruachadh de láimh — na mórán SDKanna, na mórán teorainneacha ráta, agus gan aon tuairim agat faoin méid atá agat i ndáiríre. Catalógaíonn OmniRoute **478 iontráil sraithe saor in aisce thar 34 eochair chomhthiomsaithe athfhillteacha** agus ríomhann sé príomhfhigiúr na gcomharthaí ó na **17 gcomhthiomsú a bhfuil buiséad míosúil dearfach foilsithe acu, chomh maith le cúig uasteorainn Groq in aghaidh na samhla**, agus dúbláil bainte de réir comhthiomsuithe comhroinnte. Taispeántar ar leithligh cuótaí nach n-osclaítear ach tar éis seiceáil aitheantais réigiúnaigh (inniu: ModelScope), +~6M taobh thiar d'fhíorú aitheantais réigiúnaigh, agus ní chuirtear iad san áireamh sa phríomhfhigiúr riamh. Fanann an toradh le feiceáil ar an deais (`/dashboard/free-tiers`).
+> Is mór an crá é sraitheanna saor in aisce a chruachadh de láimh — na mórán SDKanna, na mórán teorainneacha ráta, agus gan aon tuairim agat faoin méid atá agat i ndáiríre. Catalógaíonn OmniRoute **467 iontráil sraithe saor in aisce thar 34 eochair chomhthiomsaithe athfhillteacha** agus ríomhann sé príomhfhigiúr na gcomharthaí ó na **17 gcomhthiomsú a bhfuil buiséad míosúil dearfach foilsithe acu, chomh maith le cúig uasteorainn Groq in aghaidh na samhla**, agus dúbláil bainte de réir comhthiomsuithe comhroinnte. Taispeántar ar leithligh cuótaí nach n-osclaítear ach tar éis seiceáil aitheantais réigiúnaigh (inniu: ModelScope), +~6M taobh thiar d'fhíorú aitheantais réigiúnaigh, agus ní chuirtear iad san áireamh sa phríomhfhigiúr riamh. Fanann an toradh le feiceáil ar an deais (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Cárta buiséid sraithe saor in aisce OmniRoute: ~1.62B comhartha saor in aisce in aghaidh na míosa go seasta, suas le ~2.22B sa chéad mhí le creidmheasanna clárúcháin, ó 34 eochair chomhthiomsaithe athfhillteacha dhoiciméadaithe a chlúdaíonn 478 iontráil sraithe saor in aisce chatalógaithe taobh thiar d'aon chríochphointe amháin. Matamaitic ionraic le dúbláil comhthiomsuithe bainte — ní áirítear gach comhthiomsú comhroinnte ach uair amháin, lena n-áirítear 17 gcomhthiomsú athfhillteacha a bhfuil buiséad míosúil dearfach comharthaí foilsithe acu, chomh maith le cúig uasteorainn Groq in aghaidh na samhla; tá 12 sholáthraí marcáilte mar sheachain i gcatalóg riosca na dtéarmaí ionas gur féidir leatsa cinneadh a dhéanamh. Áirítear sa bharra buiséid Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (cúig uasteorainn in aghaidh na samhla) agus comhthiomsuithe níos lú, chomh maith le creidmheasanna clárúcháin na chéad mhí agus soláthraithe atá saor go buan gan uasteorainn comharthaí, a thaispeántar ar leithligh ionas nach méadóidh siad an príomhfhigiúr riamh. Úsáidte/fágtha beo ar /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Cárta buiséid sraithe saor in aisce OmniRoute: ~1.62B comhartha saor in aisce in aghaidh na míosa go seasta, suas le ~2.22B sa chéad mhí le creidmheasanna clárúcháin, ó 34 eochair chomhthiomsaithe athfhillteacha dhoiciméadaithe a chlúdaíonn 467 iontráil sraithe saor in aisce chatalógaithe taobh thiar d'aon chríochphointe amháin. Matamaitic ionraic le dúbláil comhthiomsuithe bainte — ní áirítear gach comhthiomsú comhroinnte ach uair amháin, lena n-áirítear 17 gcomhthiomsú athfhillteacha a bhfuil buiséad míosúil dearfach comharthaí foilsithe acu, chomh maith le cúig uasteorainn Groq in aghaidh na samhla; tá 12 sholáthraí marcáilte mar sheachain i gcatalóg riosca na dtéarmaí ionas gur féidir leatsa cinneadh a dhéanamh. Áirítear sa bharra buiséid Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (cúig uasteorainn in aghaidh na samhla) agus comhthiomsuithe níos lú, chomh maith le creidmheasanna clárúcháin na chéad mhí agus soláthraithe atá saor go buan gan uasteorainn comharthaí, a thaispeántar ar leithligh ionas nach méadóidh siad an príomhfhigiúr riamh. Úsáidte/fágtha beo ar /dashboard/free-tiers."/>
 
 > Achoimre bheoite ar an leathanach beo `/dashboard/free-tiers`. Modheolaíocht iomlán (dúbláil comhthiomsuithe a bhaint, sraitheanna creidmheasa, téarmaí soláthraithe): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                         |         v3.8.50         | **v3.8.51** |      `v3.8.52+`       |
+|                                         |         v3.8.50         | **v3.8.51** |      `v3.8.53+`       |
 | --------------------------------------- | :---------------------: | :---------: | :-------------------: |
 | 🌐 Soláthraithe                         |           352           |   **358**   |          375          |
 | 🧠 Aitheantais uathúla samhlacha comhrá |          1320           |  **1374**   |         1475          |
@@ -587,7 +587,7 @@ faoin gcatalóg reatha ag **[radar.omniroute.online/planos](https://radar.omniro
 
 </div>
 
-> Buaicphointí le déanaí ó **v3.8.20 → v3.8.52**. Tá an stair iomlán in [`CHANGELOG.md`](CHANGELOG.md).
+> Buaicphointí le déanaí ó **v3.8.20 → v3.8.53**. Tá an stair iomlán in [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Ródú `quota-weighted`** — seachnaíonn an 20ú straitéis teaglama cuntais a bhfuil a gcuóta ídithe, ansin roghnaíonn sí as na cinn eile i gcomhréir leis an gcuóta atá fágtha ÷ an t-ualach reatha, agus coinníonn sí comhráite atá ann cheana pionnáilte. → [Teaglama Uathoibríoch](docs/routing/AUTO-COMBO.md)
 - **🧰 Mód gan chomhéadan** — ritheann `omniroute serve --headless` (nó `OMNIROUTE_HEADLESS=1`) inneall seachfhreastalaí `/v1/*` amháin, agus bíonn an deais agus na fochórais deais amháin múchta. → [Mód Gan Chomhéadan](docs/guides/HEADLESS.md)
@@ -700,7 +700,7 @@ as stair do bhlaoisce. → [Comhtháthuithe CLI](docs/guides/CLI-INTEGRATIONS.md
 
 </div>
 
-> **375 soláthraí cláraithe** ar fud na mbailiúchán canónach comhrá, meán, cuardaigh, áitiúil, gníomhairí néil agus córais, lena n-áirítear **153 a bhfuil meiteashonraí aimsithe `hasFree: true` acu**. Clúdaíonn clárlann na samhlacha comhrá **239 soláthraí / 3,059 péire ar leith soláthraí-samhla / 1,475 aitheantas amh samhla**; tá **478 ró in aghaidh na samhla**, **34 linn athfhillteacha** agus **52 soláthraí saor in aisce go deo, athfhillteacha/gan eochair** sa chatalóg ar leith buiséid in aisce. Is ainmneoirí éagsúla iad seo d'aon ghnó; tá sainmhínithe agus ríomhanna dí-dhúbláilte de réir linne sa [Tagairt Soláthraithe](docs/reference/PROVIDER_REFERENCE.md) agus sna [Sraitheanna Saor in Aisce](docs/reference/FREE_TIERS.md).
+> **375 soláthraí cláraithe** ar fud na mbailiúchán canónach comhrá, meán, cuardaigh, áitiúil, gníomhairí néil agus córais, lena n-áirítear **153 a bhfuil meiteashonraí aimsithe `hasFree: true` acu**. Clúdaíonn clárlann na samhlacha comhrá **239 soláthraí / 3,059 péire ar leith soláthraí-samhla / 1,475 aitheantas amh samhla**; tá **467 ró in aghaidh na samhla**, **34 linn athfhillteacha** agus **52 soláthraí saor in aisce go deo, athfhillteacha/gan eochair** sa chatalóg ar leith buiséid in aisce. Is ainmneoirí éagsúla iad seo d'aon ghnó; tá sainmhínithe agus ríomhanna dí-dhúbláilte de réir linne sa [Tagairt Soláthraithe](docs/reference/PROVIDER_REFERENCE.md) agus sna [Sraitheanna Saor in Aisce](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1379,7 +1379,7 @@ Méadrachtaí canónacha ar 2026-10-18: **1.976 físeán uathúil** · **20.220.
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Treoir Athléimneachta</a></b></td><td>Scoradáin chiorcaid, tréimhsí fuaraithe, scuaine, cosaint ar thréad thoirní, bréagú TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Inneall Teaglama Uathoibríoch</a></b></td><td>Scóráil 16 fhachtóir, pacáistí móid, féinchneasú</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Treoir Seachfhreastalaí</a></b></td><td>Córas seachfhreastalaí 3 leibhéal, margadh 1proxy, CRUD clárlainne</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Sraitheanna Saor in Aisce</a></b></td><td>Eolaire comhdhlúite: 34 linn athfhillteacha doiciméadaithe / 478 iontráil sraithe saor in aisce catalógaithe</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Sraitheanna Saor in Aisce</a></b></td><td>Eolaire comhdhlúite: 34 linn athfhillteacha doiciméadaithe / 467 iontráil sraithe saor in aisce catalógaithe</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Gailearaí Gnéithe</a></b></td><td>Turas amhairc ar an deais le gabhálacha scáileáin</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Doiciméadacht an Bhunachair Chóid</a></b></td><td>Treoir céim ar chéim don bhunachar cód atá oiriúnach do thosaitheoirí</td></tr>
 </table>
@@ -1822,7 +1822,7 @@ Ceadúnas MIT - féach [LICENSE](LICENSE) le haghaidh sonraí.
 
 **[⬆ Ar ais go barr](#-omniroute)** · Tógtha le ❤️ don phobal AI foinse oscailte.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Ceadúnas MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Ceadúnas MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions cumasaithe le haghaidh ceisteanna agus freagraí ón bpobal -->

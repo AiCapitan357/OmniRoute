@@ -253,7 +253,12 @@ test("CLI compares candidate debt to the event baseline, including merge queues 
       "utf8"
     )
   );
-  const allDebt = frozen.entries.map((entry) => `${entry.provider}/${entry.modelId}`);
+  // The immutable seed can retain identities subsequently removed from the catalog.
+  // Bootstrap only live rows; retired identities must not become valid debt again.
+  const liveKeys = new Set(FREE_MODEL_BUDGETS.map((entry) => `${entry.provider}/${entry.modelId}`));
+  const allDebt = frozen.entries
+    .map((entry) => `${entry.provider}/${entry.modelId}`)
+    .filter((key) => liveKeys.has(key));
   const git = (...args) =>
     execFileSync("git", args, {
       cwd: dir,

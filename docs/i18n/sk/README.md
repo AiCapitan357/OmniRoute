@@ -25,9 +25,9 @@
 
 > **Použite vlastné účty poskytovateľov.** Ide o odhadovaný súhrn samostatne dostupných bezplatných úrovní tretích strán, nie o tokenový grant od OmniRoute. Zaregistrujte sa, získajte prihlasovacie údaje tam, kde sú potrebné, a pripojte poskytovateľov, ktorých môžete používať; každý poskytovateľ si určuje vlastné limity, dostupnosť a podmienky.
 >
-> Manuálne kombinovanie bezplatných úrovní je náročné — desiatky SDK, desiatky limitov požiadaviek a žiadny prehľad o tom, koľko toho skutočne máte. OmniRoute katalogizuje **478 položiek bezplatných úrovní v rámci 34 kľúčov opakujúcich sa fondov** a vypočítava celkový počet tokenov zo **17 fondov so zverejneným kladným mesačným rozpočtom a piatich limitov Groq pre jednotlivé modely**, pričom odstraňuje duplicity podľa zdieľaného fondu. Kvóty, ktoré sa sprístupnia až po regionálnom overení identity (aktuálne: ModelScope), sa zobrazujú samostatne ako +~6 mil. za regionálnym overením identity a nikdy sa nezapočítavajú do hlavného údaja. Výsledok zostáva viditeľný na ovládacom paneli (`/dashboard/free-tiers`).
+> Manuálne kombinovanie bezplatných úrovní je náročné — desiatky SDK, desiatky limitov požiadaviek a žiadny prehľad o tom, koľko toho skutočne máte. OmniRoute katalogizuje **467 položiek bezplatných úrovní v rámci 34 kľúčov opakujúcich sa fondov** a vypočítava celkový počet tokenov zo **17 fondov so zverejneným kladným mesačným rozpočtom a piatich limitov Groq pre jednotlivé modely**, pričom odstraňuje duplicity podľa zdieľaného fondu. Kvóty, ktoré sa sprístupnia až po regionálnom overení identity (aktuálne: ModelScope), sa zobrazujú samostatne ako +~6 mil. za regionálnym overením identity a nikdy sa nezapočítavajú do hlavného údaja. Výsledok zostáva viditeľný na ovládacom paneli (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Karta rozpočtu bezplatných úrovní OmniRoute: stabilne ~1,62 mld. bezplatných tokenov mesačne, až ~2,22 mld. počas prvého mesiaca s registračnými kreditmi, z 34 zdokumentovaných kľúčov opakujúcich sa fondov pokrývajúcich 478 katalogizovaných položiek bezplatných úrovní za jedným koncovým bodom. Transparentný výpočet s odstránením duplicít fondov — každý zdieľaný fond sa započítava iba raz vrátane 17 opakujúcich sa fondov so zverejneným kladným mesačným tokenovým rozpočtom a piatich limitov Groq pre jednotlivé modely; 12 poskytovateľov je v katalógu rizík podmienok označených ako nevhodných, aby ste sa mohli rozhodnúť sami. Ukazovateľ rozpočtu zahŕňa Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (päť limitov pre jednotlivé modely) a menšie fondy, ako aj registračné kredity na prvý mesiac a trvalo bezplatných poskytovateľov bez tokenového limitu zobrazených samostatne, aby nikdy umelo nenavyšovali hlavný údaj. Aktuálne využitie a zostávajúci objem na /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Karta rozpočtu bezplatných úrovní OmniRoute: stabilne ~1,62 mld. bezplatných tokenov mesačne, až ~2,22 mld. počas prvého mesiaca s registračnými kreditmi, z 34 zdokumentovaných kľúčov opakujúcich sa fondov pokrývajúcich 467 katalogizovaných položiek bezplatných úrovní za jedným koncovým bodom. Transparentný výpočet s odstránením duplicít fondov — každý zdieľaný fond sa započítava iba raz vrátane 17 opakujúcich sa fondov so zverejneným kladným mesačným tokenovým rozpočtom a piatich limitov Groq pre jednotlivé modely; 12 poskytovateľov je v katalógu rizík podmienok označených ako nevhodných, aby ste sa mohli rozhodnúť sami. Ukazovateľ rozpočtu zahŕňa Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (päť limitov pre jednotlivé modely) a menšie fondy, ako aj registračné kredity na prvý mesiac a trvalo bezplatných poskytovateľov bez tokenového limitu zobrazených samostatne, aby nikdy umelo nenavyšovali hlavný údaj. Aktuálne využitie a zostávajúci objem na /dashboard/free-tiers."/>
 
 > Animovaný súhrn živej stránky `/dashboard/free-tiers`. Úplná metodika (odstraňovanie duplicít fondov, úrovne kreditov, podmienky poskytovateľov): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                |         v3.8.50         | **v3.8.51** |      `v3.8.52+`       |
+|                                |         v3.8.50         | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------------ | :---------------------: | :---------: | :-------------------: |
 | 🌐 Poskytovatelia              |           352           |   **358**   |          375          |
 | 🧠 Jedinečné ID modelov chatu  |          1320           |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ Radar je voliteľný a používa iba požiadavky GET. Klient OmniRoute neodosiel
 
 </div>
 
-> Najnovšie zaujímavosti od verzie **v3.8.20 → v3.8.52**. Úplnú históriu nájdete v súbore [`CHANGELOG.md`](CHANGELOG.md).
+> Najnovšie zaujímavosti od verzie **v3.8.20 → v3.8.53**. Úplnú históriu nájdete v súbore [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Smerovanie `quota-weighted`** — 20. kombinovaná stratégia preskočí účty s vyčerpanou kvótou a potom vyberá zo zvyšných v pomere zostávajúcej kvóty ÷ aktuálneho zaťaženia, pričom existujúce konverzácie zostávajú pripnuté. → [Automatické kombinácie](docs/routing/AUTO-COMBO.md)
 - **🧰 Bezobslužný režim** — `omniroute serve --headless` (alebo `OMNIROUTE_HEADLESS=1`) spustí iba proxy mechanizmus `/v1/*`, pričom ovládací panel a subsystémy určené výhradne preň zostanú vypnuté. → [Bezobslužný režim](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ do histórie vášho shellu. → [Integrácie CLI](docs/guides/CLI-INTEGRATIONS.
 
 </div>
 
-> **375 registrovaných poskytovateľov** v rámci kanonických kolekcií chatu, médií, vyhľadávania, lokálnych služieb, cloudových agentov a systémov, pričom **153 z nich obsahuje metadáta zisťovania `hasFree: true`**. Register chatovacích modelov zahŕňa **239 poskytovateľov / 3 059 jedinečných dvojíc poskytovateľ–model / 1 475 nespracovaných ID modelov**; samostatný katalóg bezplatných rozpočtov obsahuje **478 riadkov pre jednotlivé modely**, **34 opakujúcich sa fondov** a **52 opakujúcich sa/bezkľúčových poskytovateľov bezplatných navždy**. Tieto menovatele sú zámerne odlišné; definície a výpočty s deduplikáciou fondov nájdete v dokumentoch [Referencia poskytovateľov](docs/reference/PROVIDER_REFERENCE.md) a [Bezplatné úrovne](docs/reference/FREE_TIERS.md).
+> **375 registrovaných poskytovateľov** v rámci kanonických kolekcií chatu, médií, vyhľadávania, lokálnych služieb, cloudových agentov a systémov, pričom **153 z nich obsahuje metadáta zisťovania `hasFree: true`**. Register chatovacích modelov zahŕňa **239 poskytovateľov / 3 059 jedinečných dvojíc poskytovateľ–model / 1 475 nespracovaných ID modelov**; samostatný katalóg bezplatných rozpočtov obsahuje **467 riadkov pre jednotlivé modely**, **34 opakujúcich sa fondov** a **52 opakujúcich sa/bezkľúčových poskytovateľov bezplatných navždy**. Tieto menovatele sú zámerne odlišné; definície a výpočty s deduplikáciou fondov nájdete v dokumentoch [Referencia poskytovateľov](docs/reference/PROVIDER_REFERENCE.md) a [Bezplatné úrovne](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1367,7 +1367,7 @@ Kanonické metriky k 2026-10-18: **1.976 jedinečných videí** · **20.220.289 
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Príručka odolnosti</a></b></td><td>Ističe, intervaly na zotavenie, front, ochrana pred náporom požiadaviek, spoofing TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Mechanizmus automatických kombinácií</a></b></td><td>Hodnotenie podľa 16 faktorov, balíky režimov, samoobnovenie</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Príručka proxy</a></b></td><td>3-úrovňový systém proxy, trhovisko 1proxy, operácie CRUD registra</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Bezplatné úrovne</a></b></td><td>Konsolidovaný adresár: 34 zdokumentovaných opakujúcich sa fondov / 478 katalogizovaných položiek bezplatných úrovní</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Bezplatné úrovne</a></b></td><td>Konsolidovaný adresár: 34 zdokumentovaných opakujúcich sa fondov / 467 katalogizovaných položiek bezplatných úrovní</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Galéria funkcií</a></b></td><td>Vizuálna prehliadka ovládacieho panela so snímkami obrazovky</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Dokumentácia kódovej základne</a></b></td><td>Prehľad kódovej základne vhodný pre začiatočníkov</td></tr>
 </table>
@@ -1810,7 +1810,7 @@ Licencia MIT – podrobnosti nájdete v súbore [LICENSE](LICENSE).
 
 **[⬆ Späť na začiatok](#-omniroute)** · Vytvorené s ❤️ pre open-source komunitu AI.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Licencia MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Licencia MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions sú povolené pre komunitné otázky a odpovede -->

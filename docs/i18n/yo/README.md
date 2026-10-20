@@ -25,9 +25,9 @@
 
 > **Mú àwọn àkọọ́lẹ̀ olùpèsè tirẹ wá.** Èyí jẹ́ àròkọ àpapọ̀ tí a fojú díwọ̀n láti inú àwọn ìpele ọ̀fẹ́ ẹgbẹ́ kẹta tí ẹnì kọ̀ọ̀kan lè yẹ fún lọ́tọ̀ọ̀tọ̀, kì í ṣe ẹ̀bùn tọ́kẹnì láti OmniRoute. Forúkọ sílẹ̀, gba àwọn ẹ̀rí ìwọlé níbi tí wọ́n bá ti nílò wọn, kí o sì so àwọn olùpèsè tí o lè lò pọ̀; olùpèsè kọ̀ọ̀kan ló ń ṣàkóso àwọn ààlà, wíwà-nírọ̀rùn, àti àwọn òfin rẹ̀.
 >
-> Kíkó àwọn ìpele ọ̀fẹ́ jọ pẹ̀lú ọwọ́ máa ń nira — ọ̀pọ̀lọpọ̀ SDK, ọ̀pọ̀lọpọ̀ ààlà ìwọ̀n ìbéèrè, kò sì sí ọ̀nà láti mọ iye tí o ní gan-an. OmniRoute ṣe àkójọ **àwọn àkọọ́lẹ̀ ìpele ọ̀fẹ́ 478 lábẹ́ àwọn kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá 34** ó sì ń ṣírò àkójọpọ̀ tọ́kẹnì àkọ́kọ́ láti inú **àwọn àkójọpọ̀ 17 tó ní ìnáwó oṣooṣù rere tí a tẹ̀ jáde, pẹ̀lú àwọn ààlà Groq márùn-ún fún awoṣe kọ̀ọ̀kan**, nípa yíyọ àwọn àkójọpọ̀ tí wọ́n pín pọ̀ kúrò nínú àtúnkà. Àwọn ìpín tí wọ́n máa ń ṣí lẹ́yìn àyẹ̀wò ìdánimọ̀ agbègbè nìkan (lónìí: ModelScope) ni a fihàn lọ́tọ̀, +~6M lẹ́yìn ìjẹ́rìísí ìdánimọ̀ agbègbè, a kì í sì í kà wọ́n pọ̀ mọ́ àkójọpọ̀ àkọ́kọ́. Àbájáde náà ṣì máa ń hàn lórí pánẹ́ẹ̀lì (`/dashboard/free-tiers`).
+> Kíkó àwọn ìpele ọ̀fẹ́ jọ pẹ̀lú ọwọ́ máa ń nira — ọ̀pọ̀lọpọ̀ SDK, ọ̀pọ̀lọpọ̀ ààlà ìwọ̀n ìbéèrè, kò sì sí ọ̀nà láti mọ iye tí o ní gan-an. OmniRoute ṣe àkójọ **àwọn àkọọ́lẹ̀ ìpele ọ̀fẹ́ 467 lábẹ́ àwọn kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá 34** ó sì ń ṣírò àkójọpọ̀ tọ́kẹnì àkọ́kọ́ láti inú **àwọn àkójọpọ̀ 17 tó ní ìnáwó oṣooṣù rere tí a tẹ̀ jáde, pẹ̀lú àwọn ààlà Groq márùn-ún fún awoṣe kọ̀ọ̀kan**, nípa yíyọ àwọn àkójọpọ̀ tí wọ́n pín pọ̀ kúrò nínú àtúnkà. Àwọn ìpín tí wọ́n máa ń ṣí lẹ́yìn àyẹ̀wò ìdánimọ̀ agbègbè nìkan (lónìí: ModelScope) ni a fihàn lọ́tọ̀, +~6M lẹ́yìn ìjẹ́rìísí ìdánimọ̀ agbègbè, a kì í sì í kà wọ́n pọ̀ mọ́ àkójọpọ̀ àkọ́kọ́. Àbájáde náà ṣì máa ń hàn lórí pánẹ́ẹ̀lì (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Káàdì ìnáwó ìpele ọ̀fẹ́ OmniRoute: ~1.62B tọ́kẹnì ọ̀fẹ́ fún oṣù kan ní ìdúróṣinṣin, tó lè dé ~2.22B ní oṣù àkọ́kọ́ pẹ̀lú àwọn kírẹ́díìtì ìforúkọsílẹ̀, láti inú àwọn kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá 34 tí a ṣàkọsílẹ̀, tí ó bo àwọn àkọọ́lẹ̀ ìpele ọ̀fẹ́ 478 tí a ṣe àkójọ wọn lẹ́yìn ojú-ọ̀nà kan ṣoṣo. Ìṣirò olóòtítọ́ tí a ti yọ àtúnkà àkójọpọ̀ kúrò — a ka àkójọpọ̀ tí a pín kọ̀ọ̀kan lẹ́ẹ̀kan ṣoṣo, pẹ̀lú àwọn àkójọpọ̀ tó ń tún wá 17 tí wọ́n ní ìnáwó tọ́kẹnì oṣooṣù rere tí a tẹ̀ jáde, àti àwọn ààlà Groq márùn-ún fún awoṣe kọ̀ọ̀kan; a sàmì sí àwọn olùpèsè 12 gẹ́gẹ́ bí ohun tó yẹ kí a yẹra fún nínú àkójọ ewu òfin, kí ìwọ lè pinnu. Ọ̀pá ìnáwó náà ní Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (àwọn ààlà márùn-ún fún awoṣe kọ̀ọ̀kan) àti àwọn àkójọpọ̀ kékeré, pẹ̀lú àwọn kírẹ́díìtì ìforúkọsílẹ̀ oṣù àkọ́kọ́ àti àwọn olùpèsè ọ̀fẹ́ títí láé tí kò ní ààlà tọ́kẹnì tí a fihàn lọ́tọ̀ kí wọ́n má bàa mú àkójọpọ̀ àkọ́kọ́ ga ju òtítọ́ lọ. Ìlò àti iye tó kù ní àkókò gidi lórí /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Káàdì ìnáwó ìpele ọ̀fẹ́ OmniRoute: ~1.62B tọ́kẹnì ọ̀fẹ́ fún oṣù kan ní ìdúróṣinṣin, tó lè dé ~2.22B ní oṣù àkọ́kọ́ pẹ̀lú àwọn kírẹ́díìtì ìforúkọsílẹ̀, láti inú àwọn kọ́kọ́rọ́ àkójọpọ̀ tó ń tún wá 34 tí a ṣàkọsílẹ̀, tí ó bo àwọn àkọọ́lẹ̀ ìpele ọ̀fẹ́ 467 tí a ṣe àkójọ wọn lẹ́yìn ojú-ọ̀nà kan ṣoṣo. Ìṣirò olóòtítọ́ tí a ti yọ àtúnkà àkójọpọ̀ kúrò — a ka àkójọpọ̀ tí a pín kọ̀ọ̀kan lẹ́ẹ̀kan ṣoṣo, pẹ̀lú àwọn àkójọpọ̀ tó ń tún wá 17 tí wọ́n ní ìnáwó tọ́kẹnì oṣooṣù rere tí a tẹ̀ jáde, àti àwọn ààlà Groq márùn-ún fún awoṣe kọ̀ọ̀kan; a sàmì sí àwọn olùpèsè 12 gẹ́gẹ́ bí ohun tó yẹ kí a yẹra fún nínú àkójọ ewu òfin, kí ìwọ lè pinnu. Ọ̀pá ìnáwó náà ní Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (àwọn ààlà márùn-ún fún awoṣe kọ̀ọ̀kan) àti àwọn àkójọpọ̀ kékeré, pẹ̀lú àwọn kírẹ́díìtì ìforúkọsílẹ̀ oṣù àkọ́kọ́ àti àwọn olùpèsè ọ̀fẹ́ títí láé tí kò ní ààlà tọ́kẹnì tí a fihàn lọ́tọ̀ kí wọ́n má bàa mú àkójọpọ̀ àkọ́kọ́ ga ju òtítọ́ lọ. Ìlò àti iye tó kù ní àkókò gidi lórí /dashboard/free-tiers."/>
 
 > Àkótán aláwòrán tí ń rìn ti ojú-ewé `/dashboard/free-tiers` ní àkókò gidi. Ọ̀nà ìṣirò kíkún (yíyọ àtúnkà àkójọpọ̀, àwọn ìpele kírẹ́díìtì, àwọn òfin olùpèsè): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                    |         v3.8.50          | **v3.8.51** |       `v3.8.52+`       |
+|                                    |         v3.8.50          | **v3.8.51** |       `v3.8.53+`       |
 | ---------------------------------- | :----------------------: | :---------: | :--------------------: |
 | 🌐 Àwọn olùpèsè                    |           352            |   **358**   |          375           |
 | 🧠 Àwọn ID àwòṣe ìfọ̀rọ̀wérọ̀ àrà ọ̀tọ̀ |           1320           |  **1374**   |          1475          |
@@ -587,7 +587,7 @@ tẹlifíṣọ̀nù lílò, tàbí ipò ìkọ̀sílẹ̀ ìkéde abẹ́lẹ̀
 
 </div>
 
-> Àwọn àfihàn tuntun láti **v3.8.20 → v3.8.52**. Ìtàn kíkún wà nínú [`CHANGELOG.md`](CHANGELOG.md).
+> Àwọn àfihàn tuntun láti **v3.8.20 → v3.8.53**. Ìtàn kíkún wà nínú [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Ìdarí `quota-weighted`** — ọgbọ́n àpapọ̀ ogún yìí máa ń fo àwọn àkọọ́lẹ̀ tí ìpín wọn ti tán, lẹ́yìn náà ó máa ń yan láàárín àwọn tó kù ní ìbámu pẹ̀lú ìpín tó ṣẹ́kù ÷ ẹrù tó ń ṣiṣẹ́ lọ́wọ́, nígbà tó ń jẹ́ kí àwọn ìjíròrò tó ti wà tẹ́lẹ̀ dúró lórí ibi tí a so wọ́n mọ́. → [Àpapọ̀ Aládàáṣiṣẹ́](docs/routing/AUTO-COMBO.md)
 - **🧰 Ipò aláìní ojú-iṣẹ́** — `omniroute serve --headless` (tàbí `OMNIROUTE_HEADLESS=1`) máa ń ṣiṣẹ́ ẹ́ńjìnnì aṣojú `/v1/*` nìkan, pẹ̀lú pánẹ́ẹ̀lì ìṣàkóso àti àwọn ẹ̀ka tó jẹ́ ti pánẹ́ẹ̀lì nìkan ní pípa. → [Ipò Aláìní Ojú-iṣẹ́](docs/guides/HEADLESS.md)
@@ -700,7 +700,7 @@ nínú ìtàn shell rẹ. → [Àwọn Ìṣọ̀kan CLI](docs/guides/CLI-INTEGR
 
 </div>
 
-> **Àwọn olùpèsè 375 tí a forúkọ sílẹ̀** káàkiri àkójọpọ̀ ìfọ̀rọ̀wérọ̀, mídíà, ìṣàwárí, ti agbègbè, aṣojú-àwọsánmà àti ètò àkọ́kọ́, pẹ̀lú **153 tí ó ní metadata ìṣàwárí `hasFree: true`**. Ìforúkọsílẹ̀ módẹ́ẹ̀lì ìfọ̀rọ̀wérọ̀ bo **àwọn olùpèsè 239 / àwọn tọkọtaya olùpèsè-módẹ́ẹ̀lì ọ̀tọ̀ọ̀tọ̀ 3,059 / àwọn ID módẹ́ẹ̀lì àìtúnṣe 1,475**; kátálọ́ọ̀gù ìnáwó-ọ̀fẹ́ ọ̀tọ̀ náà ní **àwọn ìlà fún módẹ́ẹ̀lì kọ̀ọ̀kan 478**, **àwọn àkójọpọ̀ tí ń tún ṣẹlẹ̀ 34** àti **àwọn olùpèsè ọ̀fẹ́ títí láé tí ń tún ṣẹlẹ̀/tí kò nílò kọ́kọ́rọ́ 52**. Àwọn iye ìpín wọ̀nyí yàtọ̀ nípa ètò; àwọn ìtumọ̀ àti ìṣírò tí a ti yọ àtúnṣe-àkójọpọ̀ kúrò wà nínú [Ìtọ́kasí Olùpèsè](docs/reference/PROVIDER_REFERENCE.md) àti [Àwọn Ìpele Ọ̀fẹ́](docs/reference/FREE_TIERS.md).
+> **Àwọn olùpèsè 375 tí a forúkọ sílẹ̀** káàkiri àkójọpọ̀ ìfọ̀rọ̀wérọ̀, mídíà, ìṣàwárí, ti agbègbè, aṣojú-àwọsánmà àti ètò àkọ́kọ́, pẹ̀lú **153 tí ó ní metadata ìṣàwárí `hasFree: true`**. Ìforúkọsílẹ̀ módẹ́ẹ̀lì ìfọ̀rọ̀wérọ̀ bo **àwọn olùpèsè 239 / àwọn tọkọtaya olùpèsè-módẹ́ẹ̀lì ọ̀tọ̀ọ̀tọ̀ 3,059 / àwọn ID módẹ́ẹ̀lì àìtúnṣe 1,475**; kátálọ́ọ̀gù ìnáwó-ọ̀fẹ́ ọ̀tọ̀ náà ní **àwọn ìlà fún módẹ́ẹ̀lì kọ̀ọ̀kan 467**, **àwọn àkójọpọ̀ tí ń tún ṣẹlẹ̀ 34** àti **àwọn olùpèsè ọ̀fẹ́ títí láé tí ń tún ṣẹlẹ̀/tí kò nílò kọ́kọ́rọ́ 52**. Àwọn iye ìpín wọ̀nyí yàtọ̀ nípa ètò; àwọn ìtumọ̀ àti ìṣírò tí a ti yọ àtúnṣe-àkójọpọ̀ kúrò wà nínú [Ìtọ́kasí Olùpèsè](docs/reference/PROVIDER_REFERENCE.md) àti [Àwọn Ìpele Ọ̀fẹ́](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1376,7 +1376,7 @@ port kan, nítorí náà kò sí package CLI-nìkan lọ́tọ̀ ní báyìí.
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Ìtọ́sọ́nà Ìfaradà</a></b></td><td>Àwọn olùdáwọ́lé àyíká, àwọn àkókò ìtutù, ìlà, ìdènà ìrùpọ̀ ìbéèrè, ìfarawé TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Ẹ̀rọ Auto-Combo</a></b></td><td>Ìṣírò àmì onífókítà 16, àwọn àkójọpọ̀ ìpo, ìmúra-ẹni-padà</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Ìtọ́sọ́nà Proxy</a></b></td><td>Ètò proxy onípele mẹ́ta, ọjà 1proxy, CRUD ilé ìforúkọsílẹ̀</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Àwọn Ìpele Ọ̀fẹ́</a></b></td><td>Àkójọ àpapọ̀: àwọn àkójọpọ̀ àsìkò-méjì-méjì 34 tí a ṣe àkọsílẹ̀ / àwọn àkọsílẹ̀ ìpele-ọ̀fẹ́ 478 tí a ṣàkójọ</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Àwọn Ìpele Ọ̀fẹ́</a></b></td><td>Àkójọ àpapọ̀: àwọn àkójọpọ̀ àsìkò-méjì-méjì 34 tí a ṣe àkọsílẹ̀ / àwọn àkọsílẹ̀ ìpele-ọ̀fẹ́ 467 tí a ṣàkójọ</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Àwòrán Àwọn Ẹ̀ya</a></b></td><td>Ìrìn-àjò ojú dashboard pẹ̀lú àwọn àwòrán ojú-iboju</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Ìwé Àkọsílẹ̀ Codebase</a></b></td><td>Ìtọ́kasí codebase tó rọrùn fún olùbẹ̀rẹ̀</td></tr>
 </table>
@@ -1819,7 +1819,7 @@ OmniRoute dúró lórí èjìká àwọn òmìrán. Ó bẹ̀rẹ̀ gẹ́gẹ́
 
 **[⬆ Padà sí òkè](#-omniroute)** · A kọ́ ọ pẹ̀lú ❤️ fún àwùjọ AI orísun-ṣíṣí.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Ìwé-àṣẹ MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Ìwé-àṣẹ MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- A ti mú GitHub Discussions ṣiṣẹ́ fún ìbéèrè àti ìdáhùn àwùjọ -->

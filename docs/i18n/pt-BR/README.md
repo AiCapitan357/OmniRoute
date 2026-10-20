@@ -25,9 +25,9 @@
 
 > **Use suas próprias contas de provedores.** Esta é uma estimativa agregada de planos gratuitos de terceiros com elegibilidade independente, não uma concessão de tokens da OmniRoute. Cadastre-se, obtenha credenciais quando necessário e conecte os provedores que você puder usar; cada provedor controla seus limites, disponibilidade e termos.
 >
-> Combinar planos gratuitos manualmente é trabalhoso — dezenas de SDKs, dezenas de limites de taxa e nenhuma ideia de quanto você realmente tem. A OmniRoute cataloga **478 entradas de planos gratuitos em 34 chaves de pools recorrentes** e calcula o total de tokens destacado a partir dos **17 pools com um orçamento mensal positivo publicado, mais cinco limites por modelo da Groq**, com deduplicação por pool compartilhado. As cotas liberadas somente após uma verificação de identidade regional (atualmente: ModelScope) são exibidas separadamente, com +~6 mi mediante verificação de identidade regional, e nunca são somadas ao total destacado. O resultado permanece visível no painel (`/dashboard/free-tiers`).
+> Combinar planos gratuitos manualmente é trabalhoso — dezenas de SDKs, dezenas de limites de taxa e nenhuma ideia de quanto você realmente tem. A OmniRoute cataloga **467 entradas de planos gratuitos em 34 chaves de pools recorrentes** e calcula o total de tokens destacado a partir dos **17 pools com um orçamento mensal positivo publicado, mais cinco limites por modelo da Groq**, com deduplicação por pool compartilhado. As cotas liberadas somente após uma verificação de identidade regional (atualmente: ModelScope) são exibidas separadamente, com +~6 mi mediante verificação de identidade regional, e nunca são somadas ao total destacado. O resultado permanece visível no painel (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Cartão de orçamento de planos gratuitos da OmniRoute: ~1,62 bi de tokens gratuitos por mês de forma contínua, chegando a ~2,22 bi no primeiro mês com créditos de cadastro, provenientes de 34 chaves documentadas de pools recorrentes que abrangem 478 entradas catalogadas de planos gratuitos por trás de um único endpoint. Cálculo transparente com deduplicação por pool — cada pool compartilhado é contabilizado uma única vez, incluindo 17 pools recorrentes com um orçamento mensal positivo de tokens publicado, mais cinco limites por modelo da Groq; 12 provedores estão marcados como evitar no catálogo de riscos dos termos, para que você decida. A barra de orçamento inclui Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (cinco limites por modelo) e pools menores, além de créditos de cadastro do primeiro mês e provedores permanentemente gratuitos sem limite de tokens, exibidos separadamente para que nunca inflem o total destacado. Uso e saldo restantes em tempo real em /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Cartão de orçamento de planos gratuitos da OmniRoute: ~1,62 bi de tokens gratuitos por mês de forma contínua, chegando a ~2,22 bi no primeiro mês com créditos de cadastro, provenientes de 34 chaves documentadas de pools recorrentes que abrangem 467 entradas catalogadas de planos gratuitos por trás de um único endpoint. Cálculo transparente com deduplicação por pool — cada pool compartilhado é contabilizado uma única vez, incluindo 17 pools recorrentes com um orçamento mensal positivo de tokens publicado, mais cinco limites por modelo da Groq; 12 provedores estão marcados como evitar no catálogo de riscos dos termos, para que você decida. A barra de orçamento inclui Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (cinco limites por modelo) e pools menores, além de créditos de cadastro do primeiro mês e provedores permanentemente gratuitos sem limite de tokens, exibidos separadamente para que nunca inflem o total destacado. Uso e saldo restantes em tempo real em /dashboard/free-tiers."/>
 
 > Resumo animado da página `/dashboard/free-tiers` em tempo real. Metodologia completa (deduplicação de pools, níveis de crédito, termos dos provedores): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                  |           v3.8.50            | **v3.8.51** |       `v3.8.52+`        |
+|                                  |           v3.8.50            | **v3.8.51** |       `v3.8.53+`        |
 | -------------------------------- | :--------------------------: | :---------: | :---------------------: |
 | 🌐 Provedores                    |             352              |   **358**   |           375           |
 | 🧠 IDs únicos de modelos de chat |             1320             |  **1374**   |          1475           |
@@ -578,7 +578,7 @@ O Radar é opcional e usa apenas GET. O cliente OmniRoute não envia prompts, tr
 
 </div>
 
-> Destaques recentes da **v3.8.20 → v3.8.52**. Histórico completo em [`CHANGELOG.md`](CHANGELOG.md).
+> Destaques recentes da **v3.8.20 → v3.8.53**. Histórico completo em [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Roteamento `quota-weighted`** — a 20ª estratégia de combo ignora contas com cota esgotada e, depois, seleciona entre as restantes proporcionalmente à cota disponível ÷ carga em andamento, mantendo as conversas existentes fixadas. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🧰 Modo headless** — `omniroute serve --headless` (ou `OMNIROUTE_HEADLESS=1`) executa somente o mecanismo de proxy `/v1/*`, com o dashboard e os subsistemas exclusivos do dashboard desativados. → [Modo Headless](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ do histórico do shell. → [Integrações de CLI](docs/guides/CLI-INTEGRATIONS.
 
 </div>
 
-> **375 provedores registrados** nas coleções canônicas de chat, mídia, pesquisa, execução local, agentes de nuvem e sistema, incluindo **153 com metadados de descoberta `hasFree: true`**. O registro de modelos de chat abrange **239 provedores / 3.059 pares distintos de provedor-modelo / 1.475 IDs brutos de modelos**; o catálogo separado de cotas gratuitas tem **478 linhas por modelo**, **34 pools recorrentes** e **52 provedores gratuitos para sempre, recorrentes/sem chave**. Esses denominadores são diferentes intencionalmente; as definições e os cálculos com deduplicação de pools estão na [Referência de Provedores](docs/reference/PROVIDER_REFERENCE.md) e em [Níveis Gratuitos](docs/reference/FREE_TIERS.md).
+> **375 provedores registrados** nas coleções canônicas de chat, mídia, pesquisa, execução local, agentes de nuvem e sistema, incluindo **153 com metadados de descoberta `hasFree: true`**. O registro de modelos de chat abrange **239 provedores / 3.059 pares distintos de provedor-modelo / 1.475 IDs brutos de modelos**; o catálogo separado de cotas gratuitas tem **467 linhas por modelo**, **34 pools recorrentes** e **52 provedores gratuitos para sempre, recorrentes/sem chave**. Esses denominadores são diferentes intencionalmente; as definições e os cálculos com deduplicação de pools estão na [Referência de Provedores](docs/reference/PROVIDER_REFERENCE.md) e em [Níveis Gratuitos](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1368,7 +1368,7 @@ Métricas canônicas em 2026-10-18: **1.976 vídeos únicos** · **20.220.289 vi
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Guia de resiliência</a></b></td><td>Disjuntores, períodos de espera, fila, prevenção de efeito manada, falsificação de TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Mecanismo de combinação automática</a></b></td><td>Pontuação baseada em 16 fatores, pacotes de modos, autorrecuperação</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Guia de proxy</a></b></td><td>Sistema de proxy em 3 níveis, marketplace 1proxy, CRUD de registro</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Camadas gratuitas</a></b></td><td>Diretório consolidado: 34 pools recorrentes documentados / 478 entradas de camada gratuita catalogadas</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Camadas gratuitas</a></b></td><td>Diretório consolidado: 34 pools recorrentes documentados / 467 entradas de camada gratuita catalogadas</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Galeria de recursos</a></b></td><td>Tour visual pelo painel com capturas de tela</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Documentação da base de código</a></b></td><td>Visão geral da base de código voltada para iniciantes</td></tr>
 </table>
@@ -1811,7 +1811,7 @@ Licença MIT — consulte [LICENSE](LICENSE) para mais detalhes.
 
 **[⬆ Voltar ao topo](#-omniroute)** · Feito com ❤️ para a comunidade de IA de código aberto.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Licença MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Licença MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions habilitado para perguntas e respostas da comunidade -->

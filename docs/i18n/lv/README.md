@@ -25,9 +25,9 @@
 
 > **Izmantojiet savus pakalpojumu sniedzēju kontus.** Šī ir aplēstā kopsumma no atsevišķi pieejamiem trešo pušu bezmaksas līmeņiem, nevis OmniRoute piešķirts žetonu apjoms. Reģistrējieties, vajadzības gadījumā iegūstiet piekļuves datus un pievienojiet pakalpojumu sniedzējus, kurus varat izmantot; katrs pakalpojumu sniedzējs pats nosaka savus ierobežojumus, pieejamību un noteikumus.
 >
-> Manuāli apvienot bezmaksas līmeņus ir apgrūtinoši — desmitiem SDK, desmitiem ātruma ierobežojumu un nav skaidrības, cik daudz jums patiesībā ir pieejams. OmniRoute katalogā ir **478 bezmaksas līmeņu ieraksti 34 periodiski atjaunojamu kopfondu atslēgās**, un virsrakstā norādītais žetonu skaits tiek aprēķināts no **17 kopfondiem ar publicētu pozitīvu mēneša budžetu un pieciem katram modelim noteiktiem Groq ierobežojumiem**, novēršot dublēšanos koplietojamos kopfondos. Kvotas, kas kļūst pieejamas tikai pēc reģionālās identitātes pārbaudes (pašlaik: ModelScope), tiek rādītas atsevišķi — +~6M pēc reģionālās identitātes verifikācijas — un nekad netiek pieskaitītas virsrakstā norādītajam skaitam. Rezultāts vienmēr ir redzams informācijas panelī (`/dashboard/free-tiers`).
+> Manuāli apvienot bezmaksas līmeņus ir apgrūtinoši — desmitiem SDK, desmitiem ātruma ierobežojumu un nav skaidrības, cik daudz jums patiesībā ir pieejams. OmniRoute katalogā ir **467 bezmaksas līmeņu ieraksti 34 periodiski atjaunojamu kopfondu atslēgās**, un virsrakstā norādītais žetonu skaits tiek aprēķināts no **17 kopfondiem ar publicētu pozitīvu mēneša budžetu un pieciem katram modelim noteiktiem Groq ierobežojumiem**, novēršot dublēšanos koplietojamos kopfondos. Kvotas, kas kļūst pieejamas tikai pēc reģionālās identitātes pārbaudes (pašlaik: ModelScope), tiek rādītas atsevišķi — +~6M pēc reģionālās identitātes verifikācijas — un nekad netiek pieskaitītas virsrakstā norādītajam skaitam. Rezultāts vienmēr ir redzams informācijas panelī (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute bezmaksas līmeņu budžeta kartīte: stabili ~1.62B bezmaksas žetonu mēnesī un līdz pat ~2.22B pirmajā mēnesī ar reģistrācijas kredītiem no 34 dokumentētām periodiski atjaunojamu kopfondu atslēgām, kas aptver 478 katalogā iekļautus bezmaksas līmeņu ierakstus aiz viena galapunkta. Godīgs aprēķins ar kopfondu dublēšanās novēršanu — katrs koplietojamais kopfonds tiek ieskaitīts vienreiz, tostarp 17 periodiski atjaunojami kopfondi ar publicētu pozitīvu mēneša žetonu budžetu un pieci katram modelim noteikti Groq ierobežojumi; noteikumu riska katalogā 12 pakalpojumu sniedzēji ir atzīmēti kā tādi, no kuriem izvairīties, lai jūs varētu izlemt. Budžeta joslā ietilpst Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (pieci katram modelim noteikti ierobežojumi) un mazāki kopfondi, kā arī pirmā mēneša reģistrācijas kredīti un pastāvīgi bezmaksas pakalpojumu sniedzēji bez žetonu ierobežojuma, kas tiek parādīti atsevišķi, lai tie nekad mākslīgi nepalielinātu virsrakstā norādīto skaitu. Aktuālais izmantotais/atlikušais apjoms vietnē /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="OmniRoute bezmaksas līmeņu budžeta kartīte: stabili ~1.62B bezmaksas žetonu mēnesī un līdz pat ~2.22B pirmajā mēnesī ar reģistrācijas kredītiem no 34 dokumentētām periodiski atjaunojamu kopfondu atslēgām, kas aptver 467 katalogā iekļautus bezmaksas līmeņu ierakstus aiz viena galapunkta. Godīgs aprēķins ar kopfondu dublēšanās novēršanu — katrs koplietojamais kopfonds tiek ieskaitīts vienreiz, tostarp 17 periodiski atjaunojami kopfondi ar publicētu pozitīvu mēneša žetonu budžetu un pieci katram modelim noteikti Groq ierobežojumi; noteikumu riska katalogā 12 pakalpojumu sniedzēji ir atzīmēti kā tādi, no kuriem izvairīties, lai jūs varētu izlemt. Budžeta joslā ietilpst Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (pieci katram modelim noteikti ierobežojumi) un mazāki kopfondi, kā arī pirmā mēneša reģistrācijas kredīti un pastāvīgi bezmaksas pakalpojumu sniedzēji bez žetonu ierobežojuma, kas tiek parādīti atsevišķi, lai tie nekad mākslīgi nepalielinātu virsrakstā norādīto skaitu. Aktuālais izmantotais/atlikušais apjoms vietnē /dashboard/free-tiers."/>
 
 > Aktīvās `/dashboard/free-tiers` lapas animēts kopsavilkums. Pilna metodoloģija (kopfondu dublēšanās novēršana, kredītu līmeņi, pakalpojumu sniedzēju noteikumi): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                 |         v3.8.50          | **v3.8.51** |      `v3.8.52+`       |
+|                                 |         v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | ------------------------------- | :----------------------: | :---------: | :-------------------: |
 | 🌐 Pakalpojumu sniedzēji        |           352            |   **358**   |          375          |
 | 🧠 Unikāli tērzēšanas modeļu ID |           1320           |  **1374**   |         1475          |
@@ -578,7 +578,7 @@ Radar ir jāiespējo brīvprātīgi, un tas izmanto tikai GET pieprasījumus. Om
 
 </div>
 
-> Jaunākie svarīgākie uzlabojumi no **v3.8.20 → v3.8.52**. Pilna izmaiņu vēsture pieejama failā [`CHANGELOG.md`](CHANGELOG.md).
+> Jaunākie svarīgākie uzlabojumi no **v3.8.20 → v3.8.53**. Pilna izmaiņu vēsture pieejama failā [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ `quota-weighted` maršrutēšana** — 20. kombinētā stratēģija izlaiž kontus ar izsmeltu kvotu un pēc tam izvēlas starp pārējiem proporcionāli atlikušajai kvotai ÷ izpildē esošajai slodzei, saglabājot esošās sarunas piesaistītas. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
 - **🧰 Bezinterfeisa režīms** — `omniroute serve --headless` (vai `OMNIROUTE_HEADLESS=1`) darbina tikai `/v1/*` starpniekservera dzini, izslēdzot informācijas paneli un tikai tam paredzētās apakšsistēmas. → [Bezinterfeisa režīms](docs/guides/HEADLESS.md)
@@ -691,7 +691,7 @@ nonākt čaulas vēsturē. → [CLI integrācijas](docs/guides/CLI-INTEGRATIONS.
 
 </div>
 
-> **375 reģistrēti nodrošinātāji** kanoniskajās tērzēšanas, multivides, meklēšanas, lokālo, mākoņa aģentu un sistēmas kolekcijās, tostarp **153 ar `hasFree: true` atklāšanas metadatiem**. Tērzēšanas modeļu reģistrs aptver **239 nodrošinātājus / 3,059 unikālus nodrošinātāja un modeļa pārus / 1,475 neapstrādātus modeļu ID**; atsevišķajā bezmaksas budžeta katalogā ir **478 ieraksti par atsevišķiem modeļiem**, **34 periodiski atjaunojami kopfondi** un **52 periodiski atjaunojami / bezatslēgas uz visiem laikiem bezmaksas nodrošinātāji**. Šie saucēji pēc ieceres atšķiras; definīcijas un aprēķini ar apvienotiem kopfondu dublikātiem ir pieejami [nodrošinātāju uzziņā](docs/reference/PROVIDER_REFERENCE.md) un [bezmaksas līmeņu aprakstā](docs/reference/FREE_TIERS.md).
+> **375 reģistrēti nodrošinātāji** kanoniskajās tērzēšanas, multivides, meklēšanas, lokālo, mākoņa aģentu un sistēmas kolekcijās, tostarp **153 ar `hasFree: true` atklāšanas metadatiem**. Tērzēšanas modeļu reģistrs aptver **239 nodrošinātājus / 3,059 unikālus nodrošinātāja un modeļa pārus / 1,475 neapstrādātus modeļu ID**; atsevišķajā bezmaksas budžeta katalogā ir **467 ieraksti par atsevišķiem modeļiem**, **34 periodiski atjaunojami kopfondi** un **52 periodiski atjaunojami / bezatslēgas uz visiem laikiem bezmaksas nodrošinātāji**. Šie saucēji pēc ieceres atšķiras; definīcijas un aprēķini ar apvienotiem kopfondu dublikātiem ir pieejami [nodrošinātāju uzziņā](docs/reference/PROVIDER_REFERENCE.md) un [bezmaksas līmeņu aprakstā](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1367,7 +1367,7 @@ Kanoniskie rādītāji 2026-10-18: **1.976 unikāli videoklipi** · **20.220.289
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Noturības rokasgrāmata</a></b></td><td>Ķēdes pārtraucēji, atdzišanas periodi, rinda, vienlaicīgu pieprasījumu lavīnas novēršana, TLS viltošana</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Auto-Combo dzinējs</a></b></td><td>16 faktoru vērtēšana, režīmu pakotnes, pašatkopšanās</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Starpniekserveru rokasgrāmata</a></b></td><td>3 līmeņu starpniekserveru sistēma, 1proxy tirgus, reģistra CRUD operācijas</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Bezmaksas līmeņi</a></b></td><td>Apvienots katalogs: 34 dokumentēti periodiski atjaunojami resursu fondi / 478 katalogā iekļauti bezmaksas līmeņa ieraksti</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Bezmaksas līmeņi</a></b></td><td>Apvienots katalogs: 34 dokumentēti periodiski atjaunojami resursu fondi / 467 katalogā iekļauti bezmaksas līmeņa ieraksti</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Funkciju galerija</a></b></td><td>Vizuāla informācijas paneļa apskate ar ekrānuzņēmumiem</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Koda bāzes dokumentācija</a></b></td><td>Iesācējiem piemērots koda bāzes pārskats</td></tr>
 </table>
@@ -1810,7 +1810,7 @@ MIT licence — detalizētu informāciju skatiet failā [LICENSE](LICENSE).
 
 **[⬆ Atpakaļ uz sākumu](#-omniroute)** · Radīts ar ❤️ atvērtā pirmkoda MI kopienai.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · MIT licence · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · MIT licence · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- GitHub Discussions ir iespējotas kopienas jautājumiem un atbildēm -->

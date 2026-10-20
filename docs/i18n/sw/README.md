@@ -25,9 +25,9 @@
 
 > **Tumia akaunti zako mwenyewe za watoa huduma.** Haya ni makadirio ya jumla kutoka kwa viwango visivyolipishwa vya watoa huduma wengine ambavyo unastahiki kivyake, si mgao wa tokeni kutoka OmniRoute. Jisajili, pata vitambulisho vinapohitajika, na uunganishe watoa huduma unaoweza kutumia; kila mtoa huduma anadhibiti vikomo, upatikanaji na masharti yake.
 >
-> Kujumlisha viwango visivyolipishwa kwa mikono ni kazi ngumu — SDK nyingi, vikomo vingi vya kiwango cha matumizi, na hujui kwa hakika una kiasi gani. OmniRoute huorodhesha **maingizo 478 ya viwango visivyolipishwa katika funguo 34 za hifadhi zinazojirudia** na huhesabu jumla ya tokeni kutokana na **hifadhi 17 zenye bajeti chanya ya kila mwezi iliyochapishwa pamoja na vikomo vitano vya Groq kwa kila modeli**, huku ikiondoa urudufu kwa hifadhi inayoshirikiwa. Mgao unaopatikana tu baada ya ukaguzi wa utambulisho wa kikanda (kwa sasa: ModelScope) unaonyeshwa kando, +~6M baada ya uthibitishaji wa utambulisho wa kikanda, na kamwe haujumuishwi katika jumla kuu. Matokeo huendelea kuonekana kwenye dashibodi (`/dashboard/free-tiers`).
+> Kujumlisha viwango visivyolipishwa kwa mikono ni kazi ngumu — SDK nyingi, vikomo vingi vya kiwango cha matumizi, na hujui kwa hakika una kiasi gani. OmniRoute huorodhesha **maingizo 467 ya viwango visivyolipishwa katika funguo 34 za hifadhi zinazojirudia** na huhesabu jumla ya tokeni kutokana na **hifadhi 17 zenye bajeti chanya ya kila mwezi iliyochapishwa pamoja na vikomo vitano vya Groq kwa kila modeli**, huku ikiondoa urudufu kwa hifadhi inayoshirikiwa. Mgao unaopatikana tu baada ya ukaguzi wa utambulisho wa kikanda (kwa sasa: ModelScope) unaonyeshwa kando, +~6M baada ya uthibitishaji wa utambulisho wa kikanda, na kamwe haujumuishwi katika jumla kuu. Matokeo huendelea kuonekana kwenye dashibodi (`/dashboard/free-tiers`).
 
-<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kadi ya bajeti ya kiwango kisicholipishwa cha OmniRoute: takribani tokeni 1.62B zisizolipishwa kwa mwezi kwa uthabiti, hadi takribani 2.22B katika mwezi wa kwanza pamoja na salio la kujisajili, kutoka kwa funguo 34 za hifadhi zinazojirudia zilizorekodiwa ambazo zinajumuisha maingizo 478 ya viwango visivyolipishwa yaliyoorodheshwa nyuma ya endpoint moja. Hesabu ya uaminifu iliyoondoa urudufu wa hifadhi — kila hifadhi inayoshirikiwa huhesabiwa mara moja, ikijumuisha hifadhi 17 zinazojirudia zenye bajeti chanya ya kila mwezi ya tokeni iliyochapishwa pamoja na vikomo vitano vya Groq kwa kila modeli; watoa huduma 12 wametiwa alama ya kuepukwa katika katalogi ya hatari za masharti ili wewe uamue. Upau wa bajeti unajumuisha Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (vikomo vitano kwa kila modeli) na hifadhi ndogo zaidi, pamoja na salio la kujisajili la mwezi wa kwanza na watoa huduma wa kudumu wasiolipishwa wasio na kikomo cha tokeni wanaoonyeshwa kando ili kamwe wasiongeze jumla kuu kupita kiasi. Matumizi na salio linalosalia moja kwa moja kwenye /dashboard/free-tiers."/>
+<img src="./docs/diagrams/free-tier-budget.svg" width="100%" alt="Kadi ya bajeti ya kiwango kisicholipishwa cha OmniRoute: takribani tokeni 1.62B zisizolipishwa kwa mwezi kwa uthabiti, hadi takribani 2.22B katika mwezi wa kwanza pamoja na salio la kujisajili, kutoka kwa funguo 34 za hifadhi zinazojirudia zilizorekodiwa ambazo zinajumuisha maingizo 467 ya viwango visivyolipishwa yaliyoorodheshwa nyuma ya endpoint moja. Hesabu ya uaminifu iliyoondoa urudufu wa hifadhi — kila hifadhi inayoshirikiwa huhesabiwa mara moja, ikijumuisha hifadhi 17 zinazojirudia zenye bajeti chanya ya kila mwezi ya tokeni iliyochapishwa pamoja na vikomo vitano vya Groq kwa kila modeli; watoa huduma 12 wametiwa alama ya kuepukwa katika katalogi ya hatari za masharti ili wewe uamue. Upau wa bajeti unajumuisha Mistral 1B, Nara 210M, LLM7 150M, xKiro 150M, Groq 30M (vikomo vitano kwa kila modeli) na hifadhi ndogo zaidi, pamoja na salio la kujisajili la mwezi wa kwanza na watoa huduma wa kudumu wasiolipishwa wasio na kikomo cha tokeni wanaoonyeshwa kando ili kamwe wasiongeze jumla kuu kupita kiasi. Matumizi na salio linalosalia moja kwa moja kwenye /dashboard/free-tiers."/>
 
 > Muhtasari uliohuishwa wa ukurasa wa moja kwa moja wa `/dashboard/free-tiers`. Mbinu kamili (uondoaji wa urudufu wa hifadhi, viwango vya salio, masharti ya watoa huduma): **[docs/reference/FREE_TIERS.md](docs/reference/FREE_TIERS.md)**.
 >
@@ -69,7 +69,7 @@
 
 <div align="center">
 
-|                                                 |         v3.8.50          | **v3.8.51** |      `v3.8.52+`       |
+|                                                 |         v3.8.50          | **v3.8.51** |      `v3.8.53+`       |
 | ----------------------------------------------- | :----------------------: | :---------: | :-------------------: |
 | 🌐 Watoa huduma                                 |           352            |   **358**   |          375          |
 | 🧠 Vitambulisho vya kipekee vya modeli za gumzo |           1320           |  **1374**   |         1475          |
@@ -511,7 +511,7 @@ Radar ni ya kujiunga kwa hiari na hutumia GET pekee. Kiteja cha OmniRoute hakipa
 
 </div>
 
-> Vivutio vya hivi karibuni kutoka **v3.8.20 → v3.8.52**. Historia kamili ipo katika [`CHANGELOG.md`](CHANGELOG.md).
+> Vivutio vya hivi karibuni kutoka **v3.8.20 → v3.8.53**. Historia kamili ipo katika [`CHANGELOG.md`](CHANGELOG.md).
 
 - **⚖️ Uelekezaji wa `quota-weighted`** — mkakati wa 20 wa michanganyiko huruka akaunti zilizomaliza mgao, kisha huchagua kutoka kwa zilizosalia kwa uwiano wa mgao uliobaki ÷ mzigo unaoendelea, huku ukiweka mazungumzo yaliyopo kwenye akaunti zilezile. → [Mchanganyiko Otomatiki](docs/routing/AUTO-COMBO.md)
 - **🧰 Hali isiyo na kiolesura** — `omniroute serve --headless` (au `OMNIROUTE_HEADLESS=1`) huendesha injini ya proksi ya `/v1/*` pekee, huku dashibodi na mifumo midogo ya dashibodi pekee ikiwa imezimwa. → [Hali Isiyo na Kiolesura](docs/guides/HEADLESS.md)
@@ -624,7 +624,7 @@ kuhifadhiwa katika historia ya shell yako. → [Miunganisho ya CLI](docs/guides/
 
 </div>
 
-> **Watoa huduma 375 waliosajiliwa** katika mikusanyiko rasmi ya gumzo, midia, utafutaji, ndani ya kifaa, mawakala wa wingu na mfumo, ikiwa ni pamoja na **153 wenye metadata ya ugunduzi ya `hasFree: true`**. Sajili ya modeli za gumzo inajumuisha **watoa huduma 239 / jozi 3,059 tofauti za mtoa huduma na modeli / vitambulisho 1,475 ghafi vya modeli**; katalogi tofauti ya bajeti isiyolipishwa ina **safu 478 za kila modeli**, **vikundi 34 vinavyojirudia** na **watoa huduma 52 wa kudumu bila malipo wanaojirudia/wasiohitaji ufunguo**. Hizi ni denomineta tofauti kimakusudi; ufafanuzi na hesabu zilizoondolewa marudio ya vikundi zinapatikana katika [Marejeleo ya Watoa Huduma](docs/reference/PROVIDER_REFERENCE.md) na [Viwango vya Bila Malipo](docs/reference/FREE_TIERS.md).
+> **Watoa huduma 375 waliosajiliwa** katika mikusanyiko rasmi ya gumzo, midia, utafutaji, ndani ya kifaa, mawakala wa wingu na mfumo, ikiwa ni pamoja na **153 wenye metadata ya ugunduzi ya `hasFree: true`**. Sajili ya modeli za gumzo inajumuisha **watoa huduma 239 / jozi 3,059 tofauti za mtoa huduma na modeli / vitambulisho 1,475 ghafi vya modeli**; katalogi tofauti ya bajeti isiyolipishwa ina **safu 467 za kila modeli**, **vikundi 34 vinavyojirudia** na **watoa huduma 52 wa kudumu bila malipo wanaojirudia/wasiohitaji ufunguo**. Hizi ni denomineta tofauti kimakusudi; ufafanuzi na hesabu zilizoondolewa marudio ya vikundi zinapatikana katika [Marejeleo ya Watoa Huduma](docs/reference/PROVIDER_REFERENCE.md) na [Viwango vya Bila Malipo](docs/reference/FREE_TIERS.md).
 
 <div align="center">
 
@@ -1301,7 +1301,7 @@ Vipimo kanoniki mnamo 2026-10-18: **video 1.976 za kipekee** · **mara 20.220.28
   <tr><td nowrap><b><a href="docs/architecture/RESILIENCE_GUIDE.md">Mwongozo wa Ustahimilivu</a></b></td><td>Vikataji mzunguko, vipindi vya kutulia, foleni, uzuiaji wa kundi linalokimbia kwa pamoja, ughushi wa TLS</td></tr>
   <tr><td nowrap><b><a href="docs/routing/AUTO-COMBO.md">Injini ya Auto-Combo</a></b></td><td>Ukadiriaji wa vipengele 16, vifurushi vya hali, kujirekebisha</td></tr>
   <tr><td nowrap><b><a href="docs/ops/PROXY_GUIDE.md">Mwongozo wa Proksi</a></b></td><td>Mfumo wa proksi wa viwango 3, soko la 1proxy, CRUD ya sajili</td></tr>
-  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Viwango vya Bila Malipo</a></b></td><td>Saraka iliyounganishwa: makundi 34 ya mara kwa mara yaliyoandikwa / maingizo 478 ya viwango vya bila malipo yaliyowekwa kwenye katalogi</td></tr>
+  <tr><td nowrap><b><a href="docs/reference/FREE_TIERS.md">Viwango vya Bila Malipo</a></b></td><td>Saraka iliyounganishwa: makundi 34 ya mara kwa mara yaliyoandikwa / maingizo 467 ya viwango vya bila malipo yaliyowekwa kwenye katalogi</td></tr>
   <tr><td nowrap><b><a href="docs/guides/FEATURES.md">Matunzio ya Vipengele</a></b></td><td>Ziara ya kuona ya dashibodi yenye picha za skrini</td></tr>
   <tr><td nowrap><b><a href="docs/architecture/CODEBASE_DOCUMENTATION.md">Nyaraka za Msimbo Msingi</a></b></td><td>Maelezo ya hatua kwa hatua ya msimbo msingi yanayofaa kwa wanaoanza</td></tr>
 </table>
@@ -1744,7 +1744,7 @@ Leseni ya MIT - tazama [LICENSE](LICENSE) kwa maelezo.
 
 **[⬆ Rudi juu](#-omniroute)** · Imetengenezwa kwa ❤️ kwa ajili ya jumuiya ya AI ya programu huria.
 
-<sub>OmniRoute v3.8.52 · Node ≥22.22.2 · Leseni ya MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>OmniRoute v3.8.53 · Node ≥22.22.2 · Leseni ya MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
 <!-- Majadiliano ya GitHub yamewezeshwa kwa maswali na majibu ya jumuiya -->
