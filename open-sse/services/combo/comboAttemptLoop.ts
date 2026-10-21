@@ -49,7 +49,7 @@ import {
   waitForCooldownAwareRetry,
 } from "../../../src/sse/services/cooldownAwareRetry.ts";
 import { toRetryAfterDisplayValue } from "./validateQuality.ts";
-import { finalizeComboTrace, finishComboTrace } from "./decisionTrace.ts";
+import { finalizeComboTrace } from "./decisionTrace.ts";
 import { isRetryAfterEligibleStatus } from "./unavailableRetryGate.ts";
 import { withQuotaExhaustionClassification } from "./quotaExhaustion.ts";
 import {
@@ -486,7 +486,6 @@ export async function dispatchWithCooldownRetry(opts: {
       }
 
       // A resolved fatal response also sets anySuccess to stop dispatching.
-      // Record its actual HTTP status, not an unconditional success.
       finalizeComboTrace(deps.traceInvocationId, state.orderedTargets);
       if (anySuccess) {
         // G1: clear the safety timer on the happy path so a successful combo does
@@ -496,13 +495,9 @@ export async function dispatchWithCooldownRetry(opts: {
           loopSafetyTimer = null;
         }
         const response = await globalPromise;
-        finishComboTrace(deps.traceInvocationId, { status: response.status });
         return response;
       }
 
-      // #10681: finalize the decision trace (global timeout).
-      finalizeComboTrace(deps.traceInvocationId, state.orderedTargets);
-      finishComboTrace(deps.traceInvocationId, { status: 504 });
       // Global combo timeout: return aggregated error immediately, skipping set retries.
       if (state.comboExpired) {
         const summary = buildRedactedSummary(state.comboErrors);
@@ -622,7 +617,6 @@ export async function dispatchWithCooldownRetry(opts: {
       // All set retries exhausted — return the final error
       // #10681: finalize the decision trace (all targets failed or skipped).
       finalizeComboTrace(deps.traceInvocationId, state.orderedTargets);
-      finishComboTrace(deps.traceInvocationId, { status: 503 });
       if (!state.lastStatus) {
         if (state.recordedAttempts === 0) {
           notifyWebhookEvent("request.failed", {
@@ -783,9 +777,8 @@ export async function dispatchWithCooldownRetry(opts: {
         }
       }
 
-      // #10681: finalize the decision trace with the aggregated terminal status.
+      // #10681: finalize the decision trace after cooldown retries are exhausted.
       finalizeComboTrace(deps.traceInvocationId, state.orderedTargets);
-      finishComboTrace(deps.traceInvocationId, { status });
       // Retry-after decoration is separate from the wait decision above: only
       // rate-limit-class final statuses may carry a `(reset after ...)` suffix
       // (see unavailableRetryGate.ts — do not stitch a peer target's window onto
