@@ -166,7 +166,12 @@ export async function GET(
             model: inMem.model,
             provider: inMem.provider,
             connectionId: inMem.connectionId,
-            duration: Date.now() - inMem.startedAt,
+            duration:
+              typeof inMem.durationMs === "number" && Number.isFinite(inMem.durationMs)
+                ? inMem.durationMs
+                : (typeof inMem.completedAt === "number" && Number.isFinite(inMem.completedAt)
+                    ? inMem.completedAt
+                    : Date.now()) - inMem.startedAt,
             detailState: "in-memory",
             active: false,
             error: sanitizeErrorMessage(inMem.error) || null,
