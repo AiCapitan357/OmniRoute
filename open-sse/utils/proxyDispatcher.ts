@@ -559,10 +559,9 @@ function buildProxyDispatcher(
     return createSocksDispatcherWithFamily(
       socksOptions as unknown as Parameters<typeof createSocksDispatcherWithFamily>[0],
       family,
-      // SOCKS forces HTTP/1.1: pipelined requests share ordered responses and
-      // cancellation can tear down a neighboring SSE. Keep separate requests
-      // on separate pooled sockets. Use Math.min to preserve retry pipelining 0;
-      // replacing it with a fixed 1 would re-enable keep-alive on retries.
+      // With SOCKS/HTTP1 pipelining, a quota timeout can close the socket
+      // carrying an unrelated active stream. Cap pipelining at 1 to prevent
+      // this, preserving 0 so retries continue to use fresh connections.
       { ...options, pipelining: Math.min(options.pipelining, 1) }
     );
   }
