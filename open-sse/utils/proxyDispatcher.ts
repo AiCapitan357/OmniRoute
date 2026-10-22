@@ -561,7 +561,8 @@ function buildProxyDispatcher(
       family,
       // SOCKS forces HTTP/1.1: pipelined requests share ordered responses and
       // cancellation can tear down a neighboring SSE. Keep separate requests
-      // on separate pooled sockets, preserving retry pipelining 0.
+      // on separate pooled sockets. Use Math.min to preserve retry pipelining 0;
+      // replacing it with a fixed 1 would re-enable keep-alive on retries.
       { ...options, pipelining: Math.min(options.pipelining, 1) }
     );
   }

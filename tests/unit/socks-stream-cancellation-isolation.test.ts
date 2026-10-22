@@ -1,16 +1,30 @@
 import assert from "node:assert/strict";
+import { mkdtempSync, rmSync } from "node:fs";
 import http from "node:http";
 import net from "node:net";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test, { type TestContext } from "node:test";
 import { fetch as undiciFetch, type Dispatcher } from "undici";
 
-import { fetchWithConnectionProxy } from "../../open-sse/services/connectionProxyFetch.ts";
-import { proxyFetch, runWithProxyContext } from "../../open-sse/utils/proxyFetch.ts";
-import {
-  clearDispatcherCache,
-  createProxyDispatcher,
-  getProxyRetryDispatcher,
-} from "../../open-sse/utils/proxyDispatcher.ts";
+const previousDataDir = process.env.DATA_DIR;
+const dataDir = mkdtempSync(join(tmpdir(), "omniroute-socks-cancellation-"));
+process.env.DATA_DIR = dataDir;
+
+// These helpers import the DB layer; isolate it before module initialization.
+const { resetDbInstance } = await import("../../src/lib/db/core.ts");
+const { fetchWithConnectionProxy } =
+  await import("../../open-sse/services/connectionProxyFetch.ts");
+const { proxyFetch, runWithProxyContext } = await import("../../open-sse/utils/proxyFetch.ts");
+const { clearDispatcherCache, createProxyDispatcher, getProxyRetryDispatcher } =
+  await import("../../open-sse/utils/proxyDispatcher.ts");
+
+test.after(() => {
+  resetDbInstance();
+  rmSync(dataDir, { recursive: true, force: true });
+  if (previousDataDir === undefined) delete process.env.DATA_DIR;
+  else process.env.DATA_DIR = previousDataDir;
+});
 
 function deferred<T>() {
   let resolve!: (value: T) => void;
